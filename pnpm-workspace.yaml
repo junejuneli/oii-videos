@@ -1,0 +1,18 @@
+packages:
+  - packages/*
+  - videos/*
+
+# One Remotion version for the whole repo. Bump it here, deliberately, and
+# re-render an older video to check nothing moved (4.0.531 shipped a broken
+# Studio, which is why this is pinned).
+catalog:
+  remotion: 4.0.530
+  "@remotion/cli": 4.0.530
+  "@remotion/media": 4.0.530
+  react: 19.2.3
+  react-dom: 19.2.3
+  "@types/react": 19.2.7
+  typescript: 5.9.3
+
+onlyBuiltDependencies:
+  - esbuild

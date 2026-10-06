@@ -1,0 +1,48 @@
+{
+  "files": {
+    "public/assets/final_real.mp4": {
+      "bytes": 14538544,
+      "sha256": "a8c22546e23f7c38131a54024a99f723a5e1d22a4da040d4fbaa72357428bcb9"
+    },
+    "public/raw/乐事薯片包装变形动画-[成片]黄昏集市狐狸逃守卫.mov": {
+      "bytes": 24627277,
+      "sha256": "7c839f7328e4b73ada7741624d0bfe956f3dacdbf0210765c56e58eb847002e1"
+    },
+    "public/raw/乐事薯片包装变形动画-[样片-1]黄昏集市狐狸夺果逃亡.mp4": {
+      "bytes": 8929250,
+      "sha256": "715f8874df2a91d2112d6303f04a5366ffbaf9967412d9d14c131d466d0bc596"
+    },
+    "public/raw/乐事薯片包装变形动画-[样片-2]黄昏集市狐狸逃脱记.mp4": {
+      "bytes": 12842396,
+      "sha256": "495637ced271d0e06deb724797dde7a48240de9b9727dada1836e8316feac9be"
+    },
+    "public/raw/乐事薯片包装变形动画-[样片-3]黄昏集市狐狸逃脱记.mp4": {
+      "bytes": 8373361,
+      "sha256": "5c8932479be2f3de4c5d0e31b2256f98438b15e72d2aca67d3b15288ce71ad1f"
+    },
+    "public/raw/乐事薯片包装变形动画-[样片-4]黄昏集市狐狸脱逃记.mp4": {
+      "bytes": 9667277,
+      "sha256": "4dc4e3c76ea0d9cd732c958f3ae8d94a828559c7db07b9d9e7ebb0a1d9eea743"
+    },
+    "public/raw/乐事薯片包装变形动画-image-2.jpg": {
+      "bytes": 297663,
+      "sha256": "bfa535ee10cc58535c4ae1b0a00738d39245381f7ca9251fbdd8e3850b1f1f78"
+    },
+    "public/raw/乐事薯片包装变形动画-image.jpg": {
+      "bytes": 341566,
+      "sha256": "f49b406c1d54c2e47b304b933a7acb846aa3c0033d99c5ddf17ed65eea869d1d"
+    },
+    "public/raw/乐事薯片包装变形动画-image.png": {
+      "bytes": 1890998,
+      "sha256": "eb121000653b566ffeacbf4403825e5a271ee23cafa99ad383033df893ed335e"
+    },
+    "public/rec/recC.mp4": {
+      "bytes": 870274433,
+      "sha256": "fa12f1093a97d1d5feeb61c8b736213c6bc2a793f0d161ab3bb6c07074786e44"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 14112044,
+      "sha256": "decfa1076bfa370cc5816d0b023ab8069e3a202015f995aebd6d184d213d2b19"
+    }
+  }
+}

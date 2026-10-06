@@ -1,0 +1,26 @@
+node_modules
+out/
+.DS_Store
+.env
+
+# Brand assets are copied into each video's public/brand at dev/render time.
+videos/*/public/brand/
+
+# Heavy media stays on the local disk only (never pushed). Each video's
+# media.lock.json records what should be there; `pnpm media:check` verifies it.
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.apng
+videos/*/public/rec/
+videos/*/public/raw/
+
+# ...except the small, shared brand files every video needs.
+!brand/**/*.mp4
+!brand/**/*.wav
+!brand/**/*.apng

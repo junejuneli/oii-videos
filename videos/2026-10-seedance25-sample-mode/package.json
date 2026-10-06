@@ -1,0 +1,27 @@
+{
+  "name": "seedance25-sample-mode",
+  "private": true,
+  "description": "OiiOii × Seedance 2.5 样片模式 宣传片",
+  "scripts": {
+    "predev": "node ../../scripts/sync-brand.mjs",
+    "dev": "remotion studio",
+    "prerender": "node ../../scripts/sync-brand.mjs",
+    "render": "remotion render Seedance25SamplePromo out/preview.mp4 --codec=h264 --crf=18",
+    "prerelease": "node ../../scripts/sync-brand.mjs",
+    "release": "node ../../scripts/release.mjs Seedance25SamplePromo",
+    "music": "node ../../scripts/make-music.mjs public/sfx/music.wav 64",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@oii/kit": "workspace:*",
+    "@remotion/cli": "catalog:",
+    "@remotion/media": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remotion": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

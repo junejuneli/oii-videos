@@ -1,0 +1,17 @@
+{
+  "name": "oii-videos",
+  "private": true,
+  "description": "Source projects for every OiiOii video, plus a shared kit and creation skills.",
+  "packageManager": "pnpm@10.24.0",
+  "scripts": {
+    "new": "node scripts/new-video.mjs",
+    "media:lock": "node scripts/media.mjs lock",
+    "media:check": "node scripts/media.mjs check",
+    "typecheck": "pnpm -r typecheck",
+    "format": "prettier --write \"packages/**/*.{ts,tsx}\" \"videos/*/src/**/*.{ts,tsx}\""
+  },
+  "devDependencies": {
+    "prettier": "3.8.1",
+    "typescript": "catalog:"
+  }
+}
