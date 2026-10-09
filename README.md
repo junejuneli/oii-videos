@@ -36,11 +36,13 @@ pnpm media:check                       # 检查大文件是否齐全，以及有
 
 ## 素材
 
-视频、音频、录屏（mp4/mov/wav/…，以及 `public/rec/` 和 `public/raw/`）**只存在本地，不推送到 GitHub**。`media.lock.json` 记录了每个视频需要哪些文件，换机器或者文件丢失时用 `pnpm media:check` 就能发现。`brand/` 下的小文件是例外，会进 git。
+录屏、原始素材、配乐等工程大文件（mp4/mov/wav/…，以及 `public/rec/` 和 `public/raw/`）**只存在本地，不推送到 GitHub**；定稿的 1080p 成片上传到 Releases。`media.lock.json` 记录了每个视频需要哪些文件，换机器或者文件丢失时用 `pnpm media:check` 就能发现。`brand/` 下的小文件是例外，会进 git。
 
 ## 视频列表
 
-| 视频 | 时间 | 状态 |
-|---|---|---|
-| [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/brief.md) | 2026-10 | v9 |
-| [颜色标签功能介绍](videos/2026-10-color-tags/brief.md) | 2026-10 | ✅ 成品 v9 |
+| 视频 | 时间 | 状态 | 成片 |
+|---|---|---|---|
+| [颜色标签功能介绍](videos/2026-10-color-tags/) | 2026-10 | ✅ 成品 v9 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/color-tags-v9/oiioii-color-tags-v9-1080p.mp4) |
+| [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/brief.md) | 2026-10 | v9 | 本地 |
+
+成片发布在 [Releases](https://github.com/junejuneli/oii-videos/releases)：每个成品一个 tag（`<slug>-vN`），附 1080p mp4。仓库本身不存视频文件。

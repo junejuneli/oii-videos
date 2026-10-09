@@ -31,4 +31,16 @@ pnpm release v10
 - 用 SendUserFile 发分享版，说明里写这一版改了哪几点（和反馈逐条对应），并告诉用户母版路径。
 - 在 `brief.md` 的迭代记录里补上这一版。
 - `out/` 和所有视频文件都不进 git。版本号只增不覆盖，旧版本留在本地方便对比。
+
+## 定稿成品
+
+用户确认成品后（征得同意再发布，仓库是公开的）：
+1. 把 1080p 母版发到 GitHub Release，一个成品一个 tag：
+   ```bash
+   cp out/<name>-vN.mp4 /tmp/oiioii-<name>-vN-1080p.mp4
+   gh release create <name>-vN /tmp/oiioii-<name>-vN-1080p.mp4 --repo junejuneli/oii-videos --target main --title "<中文标题> vN（成品）" --notes "规格 + 工程链接"
+   ```
+2. 视频目录写 `README.md`（GitHub 打开目录自动显示）：封面图 `docs/cover.jpg` + 一张要点截图（从成片截，1280 宽 jpg，会进 git）、下载链接、规格、内容时间表、工程结构、命令。参考 `videos/2026-10-color-tags/README.md`。
+3. brief 状态改为“✅ 成品 vN”；根 README 视频列表补上状态和成片链接。
+4. 提交并推送。
 - 提交 git 前先让用户确认。
