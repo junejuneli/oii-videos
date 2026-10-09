@@ -3,8 +3,10 @@ import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { clamp, easeOut, FONT_CN, FONT_MONO, PINK } from "../theme";
 
 /**
- * Step label, bottom-left: a thin index, a short title, and a five-segment
- * progress rail so the viewer always knows where they are in the flow.
+ * Step label: an index, a short title, an optional note and a progress rail
+ * so the viewer always knows where they are in the flow. Bottom-left by
+ * default; `placement="top-left"` with `bold` gives a larger, brighter card
+ * (pink index badge, glowing border) that slides down from the top.
  */
 export const StepCaption: React.FC<{
   /** Titles of every step in the flow, in order. */
@@ -12,48 +14,70 @@ export const StepCaption: React.FC<{
   /** 1-based index of the current step. */
   step: number;
   note?: string;
-}> = ({ steps, step, note }) => {
+  placement?: "bottom-left" | "top-left";
+  bold?: boolean;
+}> = ({ steps, step, note, placement = "bottom-left", bold = false }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const inP = interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: easeOut });
   const out = interpolate(frame, [durationInFrames - 6, durationInFrames], [1, 0], clamp);
+  const top = placement === "top-left";
+  const k = bold ? 0.8 : 1;
   return (
     <div
       style={{
         position: "absolute",
-        left: 96,
-        bottom: 84,
+        left: top ? 40 : 96,
+        ...(top ? { top: 36 } : { bottom: 84 }),
         opacity: inP * out,
-        translate: `0px ${interpolate(inP, [0, 1], [18, 0])}px`,
-        padding: "26px 34px 24px",
-        borderRadius: 28,
-        background: "linear-gradient(160deg, rgba(28,28,34,0.86), rgba(12,12,16,0.86))",
-        border: "1px solid rgba(255,255,255,0.12)",
-        boxShadow: "0 30px 80px rgba(0,0,0,0.55)",
+        translate: `0px ${interpolate(inP, [0, 1], [top ? -22 : 18, 0])}px`,
+        padding: bold ? "16px 26px 16px 16px" : "26px 34px 24px",
+        borderRadius: bold ? 22 : 30,
+        background: bold
+          ? "linear-gradient(160deg, rgba(34,20,30,0.92), rgba(12,12,16,0.92))"
+          : "linear-gradient(160deg, rgba(28,28,34,0.86), rgba(12,12,16,0.86))",
+        border: bold ? "1.5px solid rgba(240,52,155,0.55)" : "1px solid rgba(255,255,255,0.12)",
+        boxShadow: bold
+          ? "0 0 24px rgba(240,52,155,0.22), 0 18px 50px rgba(0,0,0,0.5)"
+          : "0 30px 80px rgba(0,0,0,0.55)",
         backdropFilter: "blur(18px)",
-        minWidth: 360,
+        minWidth: bold ? 0 : 360,
       }}
     >
-      <div style={{ display: "flex", alignItems: "baseline", gap: 18 }}>
-        <span
-          style={{
-            fontFamily: FONT_MONO,
-            fontSize: 28,
-            fontWeight: 600,
-            color: PINK,
-            letterSpacing: 2,
-          }}
-        >
-          {String(step).padStart(2, "0")}
-        </span>
+      <div style={{ display: "flex", alignItems: "center", gap: bold ? 14 : 18 }}>
+        {bold ? (
+          <span
+            style={{
+              fontFamily: FONT_MONO,
+              fontSize: 22,
+              fontWeight: 800,
+              color: "#fff",
+              background: PINK,
+              borderRadius: 999,
+              minWidth: 42,
+              height: 42,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 6px 16px rgba(240,52,155,0.4)",
+            }}
+          >
+            {String(step).padStart(2, "0")}
+          </span>
+        ) : (
+          <span style={{ fontFamily: FONT_MONO, fontSize: 28, fontWeight: 600, color: PINK, letterSpacing: 2 }}>
+            {String(step).padStart(2, "0")}
+          </span>
+        )}
         <span
           style={{
             fontFamily: FONT_CN,
-            fontSize: 56,
+            fontSize: 56 * k,
             fontWeight: 700,
             color: "#fff",
             letterSpacing: 2,
             lineHeight: 1.05,
+            textShadow: bold ? "0 2px 10px rgba(240,52,155,0.3)" : undefined,
           }}
         >
           {steps[step - 1]}
@@ -63,24 +87,25 @@ export const StepCaption: React.FC<{
         <div
           style={{
             fontFamily: FONT_CN,
-            fontSize: 28,
-            fontWeight: 400,
-            color: "rgba(255,255,255,0.62)",
-            marginTop: 10,
+            fontSize: bold ? 24 : 28,
+            fontWeight: bold ? 500 : 400,
+            color: bold ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.62)",
+            marginTop: bold ? 8 : 10,
+            marginLeft: bold ? 56 : 0,
             letterSpacing: 1,
           }}
         >
           {note}
         </div>
       ) : null}
-      <div style={{ display: "flex", gap: 8, marginTop: 18 }}>
+      <div style={{ display: "flex", gap: bold ? 6 : 8, marginTop: bold ? 12 : 18, marginLeft: bold ? 56 : 0 }}>
         {steps.map((_, i) => (
           <div
             key={i}
             style={{
-              width: 52,
+              width: 52 * k,
               height: 4,
-              borderRadius: 2,
+              borderRadius: 3,
               background:
                 i < step - 1
                   ? "rgba(240,52,155,0.55)"

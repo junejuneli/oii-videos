@@ -1,0 +1,32 @@
+{
+  "files": {
+    "public/rec/recA.marks.txt": {
+      "bytes": 2092,
+      "sha256": "69770061fc88e0825c8d3ae52f3307d6dea8a60f4c886e34563ff4467aec9d7a"
+    },
+    "public/rec/recA.mp4": {
+      "bytes": 627327788,
+      "sha256": "ed02beccc31c3b187994275922d83562d6fdabe9cc849d83a817426e3c4b8ff7"
+    },
+    "public/rec/recA.start": {
+      "bytes": 21,
+      "sha256": "e9b3e9e368da3315de0c34cc1d3b1ac1b3349942a80b9c13471f1441281194b7"
+    },
+    "public/rec/recB.marks.txt": {
+      "bytes": 977,
+      "sha256": "94a4849a85208bfe00e70a5f51b08dbf387789d48614812fc6fb045e056f0e3a"
+    },
+    "public/rec/recB.mp4": {
+      "bytes": 211656986,
+      "sha256": "479c93f21c25aae847aee8197f8e0e73e5d2b2b8e315710bf2bfe6080843bc93"
+    },
+    "public/rec/recB.start": {
+      "bytes": 21,
+      "sha256": "4c6c3db11b626be76d798fade3c8766dda0906f0efcb4df49d1d10706b339f85"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 8114444,
+      "sha256": "d4bc29a8ad83198ecfa32ab290f58c2dc69b60eb0072750c6989139669eb6ac5"
+    }
+  }
+}

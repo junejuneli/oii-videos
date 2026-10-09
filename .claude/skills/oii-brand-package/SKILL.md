@@ -33,9 +33,15 @@ description: OiiOii 视频的品牌包装规范与组件：封面、步骤字幕
 - 左下角：一句 slogan，用综艺花字（黄字粗墨描边）加紧凑的动态底板（旋转放射、斜纹滚动、跳动圆点），底板只包住文字。
 - 示例：`videos/2026-10-seedance25-sample-mode/src/Scenes.tsx` 里的 `EndOverlay`。
 
+## 片头痛点与片尾
+
+- 痛点：`MemeTitle` 玩梗大字（例：「我的图呢？／我那么大一张图呢？」），配合镜头一路拉远。每个视频 1–2 个梗，脚本阶段设计好（见 oii-video-new「必备：1–2 个玩梗」）。
+- 片尾：最后一个结果直接接 `EndCenter` 式落版——背景高斯模糊变暗，居中大标题 slogan，下面 LogoChip + 功能名，从模糊到清晰进场（示例：`videos/2026-10-color-tags/src/EndCenter.tsx`）。
+
 ## 音乐与音效
 
-- `node scripts/make-music.mjs public/sfx/music.wav <秒数>` 可以合成 128 BPM 的电子背景音乐。
+- 合成脚本（都在 `scripts/`）：`make-music.mjs` 128 BPM 电子（偏躁）/ `make-music-elegant.mjs` 92 BPM 无鼓（被反馈“太平、没鼓点”）/ `make-music-groove.mjs` 118 BPM chill house（被反馈“太吵”）/ **`make-music-light.mjs` 105 BPM 轻律动（颜色标签 v6 起使用）**：1/3 拍软底鼓、2/4 拍响指、八分轻踩镲、电钢琴 + 铺底。
+- 用户偏好：有鼓点、节奏稍快，但不能吵；功能介绍片音量放在 0.22–0.26。合成音乐反复不满意时，建议用户直接提供正版配乐。
 - 背景音乐基础音量约 0.36，成片自带声音播放时压到 0.1，片尾前淡出。点击音效 `BRAND.click`，音量 0.3。
 - 不要加转场“嗖”声（被反馈过“很奇怪”）。
 

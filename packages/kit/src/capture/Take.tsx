@@ -9,6 +9,8 @@ export type TakeKey = { t: number; x: number; y: number; s: number };
 
 export type TakeShot = {
   id: string;
+  /** Recording this shot comes from; defaults to the take's main source. */
+  src?: string;
   start: number;
   end: number;
   rate?: number;
@@ -73,7 +75,7 @@ export const buildTake = (src: string, shots: TakeShot[], defaultXfade = 4) => {
     <>
       {placed.map((p) => (
         <Sequence key={p.id} from={p.from} durationInFrames={p.dur} name={p.id} layout="none">
-          <TakeClip src={src} shot={p} />
+          <TakeClip src={p.src ?? src} shot={p} />
         </Sequence>
       ))}
     </>

@@ -1,0 +1,27 @@
+{
+  "name": "color-tags",
+  "private": true,
+  "description": "OiiOii 颜色标签 功能介绍",
+  "scripts": {
+    "predev": "node ../../scripts/sync-brand.mjs",
+    "dev": "remotion studio",
+    "prerender": "node ../../scripts/sync-brand.mjs",
+    "render": "remotion render ColorTagsPromo out/preview.mp4 --codec=h264 --crf=18",
+    "prerelease": "node ../../scripts/sync-brand.mjs",
+    "release": "node ../../scripts/release.mjs ColorTagsPromo",
+    "music": "node ../../scripts/make-music-light.mjs public/sfx/music.wav 46",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@oii/kit": "workspace:*",
+    "@remotion/cli": "catalog:",
+    "@remotion/media": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remotion": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

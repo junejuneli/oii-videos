@@ -82,7 +82,9 @@ export const GlowRect: React.FC<{
   at: number;
   drawFrames?: number;
   until?: number;
-}> = ({ x, y, w, h, r = 18, at, drawFrames = 7, until = Infinity }) => {
+  /** Line width in recording pixels. */
+  stroke?: number;
+}> = ({ x, y, w, h, r = 18, at, drawFrames = 7, until = Infinity, stroke = 7 }) => {
   const frame = useCurrentFrame();
   if (frame < at || frame >= until) return null;
   const draw =
@@ -109,7 +111,7 @@ export const GlowRect: React.FC<{
         pathLength={1}
         fill="none"
         stroke={`url(#glow-${x}-${y})`}
-        strokeWidth={7}
+        strokeWidth={stroke}
         strokeLinecap="round"
         strokeDasharray="1 1"
         strokeDashoffset={1 - draw}
@@ -121,7 +123,7 @@ export const GlowRect: React.FC<{
           pathLength={1}
           fill="none"
           stroke="#fff"
-          strokeWidth={8}
+          strokeWidth={stroke + 1}
           strokeLinecap="round"
           strokeDasharray="0.14 0.86"
           strokeDashoffset={-flow}

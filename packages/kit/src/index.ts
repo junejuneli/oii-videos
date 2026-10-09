@@ -13,6 +13,8 @@ export * from "./motion/fades";
 
 // On-screen text: step captions, headlines, progress pills.
 export * from "./overlays";
+export * from "./overlays/Sticker";
 
 // OiiOii brand: logo, watermark, end sting.
 export * from "./brand";
+export * from "./brand/EndTitles";
