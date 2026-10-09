@@ -1,8 +1,8 @@
 # OiiOii × Seedance 2.5 样片模式 宣传片
 
 - 创建：2026-10-01
-- 状态：v9 已交付
-- 成片：`out/seedance25-sample-mode-v9.mp4`（母版）、`out/seedance25-sample-mode-v9-share.mp4`（分享版），都只在本地
+- 状态：✅ 成品 v9
+- 成片：[1080p（Release）](https://github.com/junejuneli/oii-videos/releases/tag/seedance25-sample-mode-v9)；本地 `out/seedance25-sample-mode-v9.mp4`（母版）、`-share.mp4`（分享版）
 - 时长：约 48s，1920×1080，30fps
 
 ## 目标

@@ -43,6 +43,6 @@ pnpm media:check                       # 检查大文件是否齐全，以及有
 | 视频 | 时间 | 状态 | 成片 |
 |---|---|---|---|
 | [颜色标签功能介绍](videos/2026-10-color-tags/) | 2026-10 | ✅ 成品 v9 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/color-tags-v9/oiioii-color-tags-v9-1080p.mp4) |
-| [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/brief.md) | 2026-10 | v9 | 本地 |
+| [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/) | 2026-10 | ✅ 成品 v9 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/seedance25-sample-mode-v9/oiioii-seedance25-sample-mode-v9-1080p.mp4) |
 
 成片发布在 [Releases](https://github.com/junejuneli/oii-videos/releases)：每个成品一个 tag（`<slug>-vN`），附 1080p mp4。仓库本身不存视频文件。
