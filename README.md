@@ -43,3 +43,4 @@ pnpm media:check                       # 检查大文件是否齐全，以及有
 | 视频 | 时间 | 状态 |
 |---|---|---|
 | [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/brief.md) | 2026-10 | v9 |
+| [颜色标签功能介绍](videos/2026-10-color-tags/brief.md) | 2026-10 | ✅ 成品 v9 |

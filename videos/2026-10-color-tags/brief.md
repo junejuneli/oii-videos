@@ -1,9 +1,9 @@
 # OiiOii 颜色标签 功能介绍
 
 - 创建：2026-10-09
-- 状态：已录制 recA（373s），待剪辑
-- 成片：`out/color-tags-vN.mp4`（本地，不进 git）
-- 规格：1920×1080，30fps，约 31s
+- 状态：✅ 成品（v9，2026-10-09）
+- 成片：`out/color-tags-v9.mp4`（母版）、`out/color-tags-v9-share.mp4`（分享版），本地，不进 git
+- 规格：1920×1080，30fps，48s
 
 ## 功能理解
 
