@@ -1,0 +1,335 @@
+[
+ {
+  "id": "A01",
+  "file": "media/A01.jpg",
+  "source": "cases/02_hand_base.jpg",
+  "role": "hook / step1: 咖啡馆底图（多出手指）",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 1839790
+ },
+ {
+  "id": "A02",
+  "file": "media/A02.png",
+  "source": "cases/02_hand_fixed.png",
+  "role": "hook / step1: 修手结果",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 4806217
+ },
+ {
+  "id": "A03",
+  "file": "media/A03.jpg",
+  "source": "cases/street_base.jpg",
+  "role": "step1 / step3: 旅游照底图",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 3298557
+ },
+ {
+  "id": "A04",
+  "file": "media/A04.png",
+  "source": "cases/01_remove_pedestrians.png",
+  "role": "step1: 去路人结果",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 5621702
+ },
+ {
+  "id": "A05a",
+  "file": "media/A05a.jpg",
+  "source": "cases/03_upper_base.jpg",
+  "role": "step1 / preview: 白裙上半身（改前）",
+  "width": 700,
+  "height": 524,
+  "bytes": 33809
+ },
+ {
+  "id": "A05b",
+  "file": "media/A05b.jpg",
+  "source": "cases/03_upper_wine.jpg",
+  "role": "step1 / preview: 酒红裙上半身（改后）",
+  "width": 700,
+  "height": 524,
+  "bytes": 35328
+ },
+ {
+  "id": "A06",
+  "file": "media/A06.jpg",
+  "source": "cases/04_ref_source_bag.jpg",
+  "role": "step3: 引用来源（相机包）",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 3497904
+ },
+ {
+  "id": "A07",
+  "file": "media/A07.jpg",
+  "source": "cases/04_ref_result_bag.jpg",
+  "role": "step3: 引用结果",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 1883099
+ },
+ {
+  "id": "A08",
+  "file": "media/A08.jpg",
+  "source": "cases/05_model_base.jpg",
+  "role": "step2: 模特底图",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 708007
+ },
+ {
+  "id": "A09",
+  "file": "media/A09.jpg",
+  "source": "cases/05_model_brown_belt.jpg",
+  "role": "step2: 腰带→棕",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 270175
+ },
+ {
+  "id": "A10",
+  "file": "media/A10.jpg",
+  "source": "cases/05_model_gold_buttons.jpg",
+  "role": "step2: 纽扣→金",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 269779
+ },
+ {
+  "id": "A11",
+  "file": "media/A11.jpg",
+  "source": "cases/05_model_fur_collar_b.jpg",
+  "role": "step2: 领口→毛领",
+  "width": 2400,
+  "height": 1792,
+  "bytes": 264732
+ },
+ {
+  "id": "A12",
+  "file": "media/A12.jpg",
+  "source": "fcover/r0_base.jpg",
+  "role": "step4: 封面底图",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 285284
+ },
+ {
+  "id": "A13",
+  "file": "media/A13.jpg",
+  "source": "fcover/r1_headline.jpg",
+  "role": "step4: 标题",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 756321
+ },
+ {
+  "id": "A14",
+  "file": "media/A14.jpg",
+  "source": "fcover/r2_issue.jpg",
+  "role": "step4: 期号",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 743934
+ },
+ {
+  "id": "A15",
+  "file": "media/A15.jpg",
+  "source": "fcover/r3_white_blazer.jpg",
+  "role": "step4: 白西装",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 777993
+ },
+ {
+  "id": "A16",
+  "file": "media/A16.jpg",
+  "source": "fcover/r4_gold_watch.jpg",
+  "role": "step4: 金表",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 778248
+ },
+ {
+  "id": "A17",
+  "file": "media/A17.jpg",
+  "source": "fcover/r5_delete_text_v2.jpg",
+  "role": "step4: 删小字",
+  "width": 1536,
+  "height": 2048,
+  "bytes": 768559
+ },
+ {
+  "id": "A18",
+  "file": "media/A18.jpg",
+  "source": "daisy-all/f01.jpg",
+  "role": "step1/2/5: 雏菊原图",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 326444
+ },
+ {
+  "id": "A19",
+  "file": "media/A19.jpg",
+  "source": "daisy-edit/recolor_cream.jpg",
+  "role": "step1: 卫衣→奶油黄",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 838542
+ },
+ {
+  "id": "A20",
+  "file": "media/A20.jpg",
+  "source": "daisy-edit/add_beret.jpg",
+  "role": "step1: 戴贝雷帽",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 833670
+ },
+ {
+  "id": "A21",
+  "file": "media/A21.jpg",
+  "source": "daisy-edit/erase_bag.jpg",
+  "role": "step1: 去纸袋",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 814852
+ },
+ {
+  "id": "A22",
+  "file": "media/A22.jpg",
+  "source": "daisy-v3/laugh.jpg",
+  "role": "step2: 大笑（框选脸）",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 818557
+ },
+ {
+  "id": "E01",
+  "file": "media/E01.jpg",
+  "source": "daisy-clean/01_tongue.jpg",
+  "role": "flipbook 1 吐舌",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 825471
+ },
+ {
+  "id": "E02",
+  "file": "media/E02.jpg",
+  "source": "daisy-clean/02_frown.jpg",
+  "role": "flipbook 2 皱眉",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 822912
+ },
+ {
+  "id": "E03",
+  "file": "media/E03.jpg",
+  "source": "daisy-v3/laugh.jpg",
+  "role": "flipbook 3 大笑",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 818557
+ },
+ {
+  "id": "E04",
+  "file": "media/E04.png",
+  "source": "daisy-clean/04_yawn.png",
+  "role": "flipbook 4 打哈欠",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 4098187
+ },
+ {
+  "id": "E05",
+  "file": "media/E05.jpg",
+  "source": "daisy-v3b/f01.jpg",
+  "role": "flipbook 5 惊讶",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 840756
+ },
+ {
+  "id": "E06",
+  "file": "media/E06.png",
+  "source": "daisy-clean/05_sad.png",
+  "role": "flipbook 6 委屈",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 4017735
+ },
+ {
+  "id": "E07",
+  "file": "media/E07.png",
+  "source": "daisy-clean/07_wink.png",
+  "role": "flipbook 7 眨眼",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 4040386
+ },
+ {
+  "id": "E08",
+  "file": "media/E08.jpg",
+  "source": "daisy-clean/06_angry.jpg",
+  "role": "flipbook 8 大怒",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 835317
+ },
+ {
+  "id": "E09",
+  "file": "media/E09.jpg",
+  "source": "daisy-v4/f02.jpg",
+  "role": "flipbook 9 嘟嘴",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 827749
+ },
+ {
+  "id": "E10",
+  "file": "media/E10.png",
+  "source": "daisy-clean/03_smirk.png",
+  "role": "flipbook 10 不屑",
+  "width": 2048,
+  "height": 1536,
+  "bytes": 4052875
+ },
+ {
+  "id": "E11",
+  "file": "media/E11.jpg",
+  "source": "daisy-v4/f01.jpg",
+  "role": "flipbook 11 闭眼微笑",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 838299
+ },
+ {
+  "id": "E12",
+  "file": "media/E12.jpg",
+  "source": "daisy-v3b/f02.jpg",
+  "role": "flipbook 12 侧目",
+  "width": 2304,
+  "height": 1728,
+  "bytes": 842558
+ },
+ {
+  "id": "A25",
+  "file": "media/A25.jpg",
+  "source": "../../out/daisy-grid-4x3.jpg",
+  "role": "step5: 12 帧宫格 + 红框锁花束",
+  "width": 1920,
+  "height": 1080,
+  "bytes": 165326
+ },
+ {
+  "id": "A24",
+  "file": "media/A24.mp4",
+  "source": "../../out/daisy-flipbook-12.mp4",
+  "role": "step5: 12 帧翻页预览（参考，不作最终）",
+  "width": null,
+  "height": null,
+  "bytes": 2189626
+ }
+]
