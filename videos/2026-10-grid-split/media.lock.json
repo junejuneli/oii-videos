@@ -1,0 +1,12 @@
+{
+  "files": {
+    "public/rec/recK.mp4": {
+      "bytes": 58111177,
+      "sha256": "ad11585ec34917c86b90df339b40b75e4ceebdbf9eacf966d875c418cab8afbe"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 7761644,
+      "sha256": "5beea09f204e43d302cdbdfab26f260e44dc0bcd47d4a445c3020a93bad99bc2"
+    }
+  }
+}
