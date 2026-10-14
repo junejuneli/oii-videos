@@ -1,0 +1,696 @@
+{
+  "files": {
+    "public/assets/wall/v1.mp4": {
+      "bytes": 7532967,
+      "sha256": "255cee9c0ae5984ad0f1267ab19bce6d19a12c963cf4d530f91ea9782f6f5a82"
+    },
+    "public/assets/wall/v2.mp4": {
+      "bytes": 11733784,
+      "sha256": "09cea29c928bcdd8bcffd0f5f343c01f7b31a885a9bdfee8fddd667131366c8a"
+    },
+    "public/assets/wall/v3.mp4": {
+      "bytes": 10701199,
+      "sha256": "9f9bc4496f7d7a65417a05f3880a7337e5b058ab3b98d09d6b1a1df8b249eea0"
+    },
+    "public/assets/wall/v4.mp4": {
+      "bytes": 14108260,
+      "sha256": "3b79552aa3ecf3cf5241e26a57ad1a44b8b1f226190bd2bb5d842c85aedec933"
+    },
+    "public/assets/wall/v5.mp4": {
+      "bytes": 4975818,
+      "sha256": "c2b89e4ba428d31e75298de0cd9a185185d01e93f1d81a4e4b199bb0db87bf22"
+    },
+    "public/assets/wall/v6.mp4": {
+      "bytes": 4090547,
+      "sha256": "c8ce505de2e26708810ee9ae0f3914421fd6e5592f56e531ab928fef5495fe5e"
+    },
+    "public/raw/canvas/ai-actor-张沛.jpg": {
+      "bytes": 226266,
+      "sha256": "03526f35be8b15e1cbbd44b710b949a6f8e87bc6bff0f8b47f3ad609bd7488fc"
+    },
+    "public/raw/canvas/case-3D动漫第一人称互动.mp4": {
+      "bytes": 9534661,
+      "sha256": "50999fdabf01838d15df0946382a2e80451c54db8e17ca96bd939a41ff81b1b9"
+    },
+    "public/raw/canvas/case-K-POP字体动效片头.mp4": {
+      "bytes": 14108260,
+      "sha256": "3b79552aa3ecf3cf5241e26a57ad1a44b8b1f226190bd2bb5d842c85aedec933"
+    },
+    "public/raw/canvas/case-失败9连拍.jpg": {
+      "bytes": 533592,
+      "sha256": "e5f5c1672af4b3601a04e7740f798de6c399063052ee13addaa8b1b3b25ba910"
+    },
+    "public/raw/canvas/case-港片慢门街头抓拍.jpg": {
+      "bytes": 1133621,
+      "sha256": "4cdc7969dd491b2807c42db566ee4f401017c505aab9cd63c9ba93891d7d8a41"
+    },
+    "public/raw/canvas/case-萌宠发布会.mp4": {
+      "bytes": 10701199,
+      "sha256": "9f9bc4496f7d7a65417a05f3880a7337e5b058ab3b98d09d6b1a1df8b249eea0"
+    },
+    "public/raw/canvas/case-角色身份参考图表.jpg": {
+      "bytes": 1056709,
+      "sha256": "412b3f80eae57f36ea34f1f7e7a2a4c8fac5fc1f8d7b84d6c9a03b8d48481103"
+    },
+    "public/raw/canvas/case-韩系女主咖啡杯转场变装-张沛.mp4": {
+      "bytes": 5752547,
+      "sha256": "61f7e950ba1143714eeda38b9530453423fa56486751322882c1030bdf6e8ac2"
+    },
+    "public/raw/canvas/girl-photo-1.png": {
+      "bytes": 503958,
+      "sha256": "48aa6ede6aba0d7bbadee3d0fb7971151d7df431097fa923c02fd74afb588188"
+    },
+    "public/raw/canvas/girl-photo-triptych.png": {
+      "bytes": 452732,
+      "sha256": "8aabb5fc84d862829d59029b921872d9e08c7df554ad3a5f68f74edc8ec248ac"
+    },
+    "public/raw/canvas/recA-result-角色身份参考图表.jpg": {
+      "bytes": 1064554,
+      "sha256": "f1bffde398dbcb0368ef447770c4925aad500c2698b20123fbbabe40fdaf429e"
+    },
+    "public/raw/canvas/recB-result-3D动漫第一人称互动.mp4": {
+      "bytes": 11733784,
+      "sha256": "09cea29c928bcdd8bcffd0f5f343c01f7b31a885a9bdfee8fddd667131366c8a"
+    },
+    "public/raw/canvas/recC-result-咖啡杯转场变装-张沛.mp4": {
+      "bytes": 7532967,
+      "sha256": "255cee9c0ae5984ad0f1267ab19bce6d19a12c963cf4d530f91ea9782f6f5a82"
+    },
+    "public/raw/templates/cases.json": {
+      "bytes": 19585,
+      "sha256": "5ce35a362dd8369b25b68e23b7fe748ba912e2c684e429239a35c5aea9d68fb2"
+    },
+    "public/raw/templates/catalog.json": {
+      "bytes": 6682346,
+      "sha256": "120f5e64367a19016022d736a0cd4ad909e0221e5d3517d774a6cb7fe2be8213"
+    },
+    "public/raw/templates/image/00-角色身份参考图表/cover.jpg": {
+      "bytes": 1057140,
+      "sha256": "3dae134c0de089f4aaf39e4a388d03021464fb4123b8e37f976fc577381a2fa2"
+    },
+    "public/raw/templates/image/00-角色身份参考图表/input1.jpg": {
+      "bytes": 702530,
+      "sha256": "c95cb53a63b95ddcf7b95be2ca635ce2c355c90c36e9e63f280c4bd81e52f1a8"
+    },
+    "public/raw/templates/image/00-角色身份参考图表/prompt.txt": {
+      "bytes": 2443,
+      "sha256": "cfe774cab65bee95eecfe147b667ebf881fcbe0b0413bd9230c23100252521ad"
+    },
+    "public/raw/templates/image/01-失败9连拍/cover.jpg": {
+      "bytes": 567300,
+      "sha256": "d94567010e4ad3e847043b64c35276bc19b3f9ad5f4f0c3ee5f91c07aea88b4a"
+    },
+    "public/raw/templates/image/01-失败9连拍/input1.png": {
+      "bytes": 471908,
+      "sha256": "3c0bd9f5ca9abd136555fce82ba4ba107210c3c07f9842f44d61d154d855cb19"
+    },
+    "public/raw/templates/image/01-失败9连拍/prompt.txt": {
+      "bytes": 103,
+      "sha256": "67d71bc54fd1e247adc4c004af9e4f7a75bafa66e114543d861a0b76c712edad"
+    },
+    "public/raw/templates/image/02-雨窗前擦剑的女侠剧照/cover.png": {
+      "bytes": 217744,
+      "sha256": "5e2bea54c2408c23727df2d283f226b35b91ed903e9c1271f4c7c1bb94476126"
+    },
+    "public/raw/templates/image/02-雨窗前擦剑的女侠剧照/prompt.txt": {
+      "bytes": 680,
+      "sha256": "e539bface2fc0747a88b824b1226a2320e52a63d63acad404b9dbe5ac41c91e2"
+    },
+    "public/raw/templates/image/03-霜白芦苇海骑马剑客剪影/cover.png": {
+      "bytes": 185904,
+      "sha256": "cc9195865d1611d60af55209d5a5b434b54c4104db8e1835742aefd688295d18"
+    },
+    "public/raw/templates/image/03-霜白芦苇海骑马剑客剪影/prompt.txt": {
+      "bytes": 750,
+      "sha256": "1562bd9c9e6226b5ed615387bb6626f5768ea75aa904dfbb807884a63eadf2cc"
+    },
+    "public/raw/templates/image/04-写实角色参考表/cover.jpg": {
+      "bytes": 1025805,
+      "sha256": "81ebcc8eb29b8ef0d2ae27a6fae9f334a62a4b95c78352f03fda16a9be7bf5ff"
+    },
+    "public/raw/templates/image/04-写实角色参考表/prompt.txt": {
+      "bytes": 3101,
+      "sha256": "8b676e515f298bf48449c4ff4f4d34b37d20040ce5babb35f142a7bacc5331dd"
+    },
+    "public/raw/templates/image/05-红袍骑马女侠策马迎风剧照/cover.png": {
+      "bytes": 248531,
+      "sha256": "7ddbca6ecbddb0375bbf185275f48954fd2a66211c88016a090203a9b7f1a045"
+    },
+    "public/raw/templates/image/05-红袍骑马女侠策马迎风剧照/prompt.txt": {
+      "bytes": 684,
+      "sha256": "7b2f14d4fb9acd46c3b03503dd86dab5412fb0c2bc73389ea7840669c0bfe189"
+    },
+    "public/raw/templates/image/06-三格闪光自拍照/cover.jpg": {
+      "bytes": 259007,
+      "sha256": "dcce0c2082dee871f067278a6bb1ea40c8437522038a0ba836bccfe0aa888907"
+    },
+    "public/raw/templates/image/06-三格闪光自拍照/input1.webp": {
+      "bytes": 212287,
+      "sha256": "a0e4a1db7afc12e44156c112a908631d3546b84bae736f1f6ffcabf3ed496181"
+    },
+    "public/raw/templates/image/06-三格闪光自拍照/prompt.txt": {
+      "bytes": 2540,
+      "sha256": "fb0b5e638ba09d779c08c62aeda0be0f4ffb3a1815feb004017ef90843db5e93"
+    },
+    "public/raw/templates/image/07-节点工作流分镜对比/cover.jpg": {
+      "bytes": 1139047,
+      "sha256": "9aa95d3971c14c8be28d6a4690a10c9ca9f90b8b5ff4ab66bca1d5f4adc2e65d"
+    },
+    "public/raw/templates/image/07-节点工作流分镜对比/prompt.txt": {
+      "bytes": 3041,
+      "sha256": "8b8e51158bf7348dd306cd88d8f34c7eb7a7e76551c7c13ced87241bf38b365b"
+    },
+    "public/raw/templates/image/08-赛博朋克忍者女刺客角色表/cover.jpg": {
+      "bytes": 1068443,
+      "sha256": "fb04a2daa3342093ef41ffe247e186d089402035c4ef685f7162b1efc42fb38c"
+    },
+    "public/raw/templates/image/08-赛博朋克忍者女刺客角色表/prompt.txt": {
+      "bytes": 3981,
+      "sha256": "1c1ca0bff9ae2da7836c5744bc2c63272d694b9602be698097f7f79d1d1c3ed7"
+    },
+    "public/raw/templates/image/09-港片慢门街头抓拍/cover.jpg": {
+      "bytes": 977007,
+      "sha256": "902500493746b1f25828da4813ed15bd9c25ceaaf6588a90b43d232c521fdbcc"
+    },
+    "public/raw/templates/image/09-港片慢门街头抓拍/prompt.txt": {
+      "bytes": 2157,
+      "sha256": "6f239e6b1b125234d7eaad08dd76d3c762e1b1db6a9a01c969e54ec0e90eb14b"
+    },
+    "public/raw/templates/image/10-手机直闪傍晚时尚肖像/cover.jpg": {
+      "bytes": 255620,
+      "sha256": "9b987df231c5dd0b9c160c6339c1283951a754c3dfcdebabe2116540023a0998"
+    },
+    "public/raw/templates/image/10-手机直闪傍晚时尚肖像/input1.jpg": {
+      "bytes": 700866,
+      "sha256": "0230544ea057c56be7f8f9816f6b7cde7f811bdb2ce0414edf3887c6a8ad4f1d"
+    },
+    "public/raw/templates/image/10-手机直闪傍晚时尚肖像/prompt.txt": {
+      "bytes": 1536,
+      "sha256": "b25566f9012f0611d7dcc312194539efe14f8ef7e1c6980ef0e99e7a93123e8d"
+    },
+    "public/raw/templates/image/11-美妆人像广告/cover.jpg": {
+      "bytes": 258462,
+      "sha256": "f2878f69351ab675601f7ca472119c927bb91a6f825c55b6d5264ba693082550"
+    },
+    "public/raw/templates/image/11-美妆人像广告/input1.jpg": {
+      "bytes": 160702,
+      "sha256": "7e1c55a4a2cf44bf9b6f207c3afed36d3abaa611d644d80dbfddb895a8f3328d"
+    },
+    "public/raw/templates/image/11-美妆人像广告/input2.webp": {
+      "bytes": 212287,
+      "sha256": "a0e4a1db7afc12e44156c112a908631d3546b84bae736f1f6ffcabf3ed496181"
+    },
+    "public/raw/templates/image/11-美妆人像广告/prompt.txt": {
+      "bytes": 2233,
+      "sha256": "6120def1e48e8d3b2888aba87e806e3f5632dd8cdd5334949b932179a7b26d7f"
+    },
+    "public/raw/templates/image/12-3×3_角色多角度设定图/cover.png": {
+      "bytes": 449669,
+      "sha256": "48ec3ab95c0197c192c3a9fe1e439a9884c1a1fea2065cea4b7481f8eac29005"
+    },
+    "public/raw/templates/image/12-3×3_角色多角度设定图/prompt.txt": {
+      "bytes": 101,
+      "sha256": "5ec40ad2a229a095c371979ad0ad55e26cc6e610ce15cba372ac9262464ae664"
+    },
+    "public/raw/templates/image/13-黑色电影最后的甜甜圈/cover.jpg": {
+      "bytes": 1276203,
+      "sha256": "f83c2b6a750e4102bb4e1ed06aa88f5d7573e74329b6ba67c2674a5d561b882e"
+    },
+    "public/raw/templates/image/13-黑色电影最后的甜甜圈/prompt.txt": {
+      "bytes": 1576,
+      "sha256": "b556b41265d2b60e518b50fe17ebcbac0d8d6d3f67a7f10ad748c39d7f0c730f"
+    },
+    "public/raw/templates/image/14-四格韩国时尚编辑大片/cover.png": {
+      "bytes": 409006,
+      "sha256": "069101700dbfdbe1f13a9368871cc62d0d0db894045f4f021c34810267ee0ce5"
+    },
+    "public/raw/templates/image/14-四格韩国时尚编辑大片/prompt.txt": {
+      "bytes": 1077,
+      "sha256": "3e96eba329188e90636409b87add4c082288a0531f9c7807d63b9bf89f4869b5"
+    },
+    "public/raw/templates/image/15-四视图动漫角色设定/cover.png": {
+      "bytes": 453922,
+      "sha256": "b768d7cdbdb61021e0c592b3deab504a17b534ad05cca0e4f116b32314d973ac"
+    },
+    "public/raw/templates/image/15-四视图动漫角色设定/prompt.txt": {
+      "bytes": 345,
+      "sha256": "937da4d28818d02bc03b84c0284b3cf23237cb2df267da491905dfb371d9ef73"
+    },
+    "public/raw/templates/image/16-庭院双剑交击定格剧照/cover.png": {
+      "bytes": 326282,
+      "sha256": "323de67261d70dfcdf2b6bbde856bfae28370220eced992f5c53b5147e1bd9d9"
+    },
+    "public/raw/templates/image/16-庭院双剑交击定格剧照/prompt.txt": {
+      "bytes": 802,
+      "sha256": "dda23fb38c0185b93852e38432ee810a88e498d7f6eb5938796e05a9252ac7c3"
+    },
+    "public/raw/templates/image/17-数字笔触插画海报/cover.jpg": {
+      "bytes": 1641884,
+      "sha256": "b79bbf0480d3333b1c336c0e02950c0384cb14bac9c74f38a6a4ba291967635f"
+    },
+    "public/raw/templates/image/17-数字笔触插画海报/prompt.txt": {
+      "bytes": 1335,
+      "sha256": "1266a6253c9567a1ec76437c95104d92d1ab203be140baef4fe3ac419917d795"
+    },
+    "public/raw/templates/image/18-樱花蓝眼极近特写/cover.jpg": {
+      "bytes": 287046,
+      "sha256": "50f615b3b159b49003263c1c860e2d87de3a914995c9a82700d90eb2cf9a04fd"
+    },
+    "public/raw/templates/image/18-樱花蓝眼极近特写/input1.jpg": {
+      "bytes": 253507,
+      "sha256": "ea13896839fa62d519c9e2c693ac343f6af780375a8eb48f9c9163c83a2d5321"
+    },
+    "public/raw/templates/image/18-樱花蓝眼极近特写/prompt.txt": {
+      "bytes": 1883,
+      "sha256": "995fa0ab8a7639d1ffbe08c966961252fb903dba742643dd780700c69f09854c"
+    },
+    "public/raw/templates/image/19-白底剪贴贴纸肖像/cover.jpg": {
+      "bytes": 456976,
+      "sha256": "44c3cd44b8028c055045007e697e53dd81c6b973994a3ad8fe82595c66b4c9ca"
+    },
+    "public/raw/templates/image/19-白底剪贴贴纸肖像/input1.jpg": {
+      "bytes": 276141,
+      "sha256": "0d1f80fbb5ccdc892f1ba6c6254c2f2e854ba50fd7be03f7524a383932ac2703"
+    },
+    "public/raw/templates/image/19-白底剪贴贴纸肖像/prompt.txt": {
+      "bytes": 4232,
+      "sha256": "b4dc23da196354ff5772f9584922999705a80ba35b956a0626e0938cd6bf978e"
+    },
+    "public/raw/templates/image/20-戴耳机棕熊海报/cover.jpg": {
+      "bytes": 333958,
+      "sha256": "6bc1b8be8033109fa16f046a669d7d56f00fd4ff23c77c56da64fcba453441d6"
+    },
+    "public/raw/templates/image/20-戴耳机棕熊海报/input1.jpg": {
+      "bytes": 147190,
+      "sha256": "40176474aa2dbc71984f95d6143f65cce0a5556e593f4c1188cb9616390500e9"
+    },
+    "public/raw/templates/image/20-戴耳机棕熊海报/input2.jpg": {
+      "bytes": 281970,
+      "sha256": "f3010495d2aef9c76f437825fbfc8e59d62d71c885662058ea7517413460e349"
+    },
+    "public/raw/templates/image/20-戴耳机棕熊海报/prompt.txt": {
+      "bytes": 2169,
+      "sha256": "bf061da423b4ca28ab0bd28580d42fc7cfe43dd913fbe8cd0e903f5b9a6b9fc2"
+    },
+    "public/raw/templates/image/21-车内自拍Q版人偶/cover.jpg": {
+      "bytes": 393601,
+      "sha256": "ff6471c299d1f219076e3b591ae9672bfff7b162c050941588bb175d6be022be"
+    },
+    "public/raw/templates/image/21-车内自拍Q版人偶/input1.jpg": {
+      "bytes": 253507,
+      "sha256": "ea13896839fa62d519c9e2c693ac343f6af780375a8eb48f9c9163c83a2d5321"
+    },
+    "public/raw/templates/image/21-车内自拍Q版人偶/prompt.txt": {
+      "bytes": 4285,
+      "sha256": "c2340bddd96fe3fa74864c4c2b8637df844231075f9336e1a2b975626d8a74c5"
+    },
+    "public/raw/templates/image/22-降噪耳机红底海报/cover.jpg": {
+      "bytes": 249617,
+      "sha256": "b1c622f1bfe04b4d08e0ca63f8c5436b14dd5281b4caecc72b8be09bb3881686"
+    },
+    "public/raw/templates/image/22-降噪耳机红底海报/input1.jpg": {
+      "bytes": 151403,
+      "sha256": "8687cb889683bc021579598fe9e721acdec1dc291335a2a0f8ce330072543ae6"
+    },
+    "public/raw/templates/image/22-降噪耳机红底海报/input2.jpg": {
+      "bytes": 170692,
+      "sha256": "54e6ab0e72e22e19245464cdde9d377e84b95a098e97678e0ae2a33d5a42ee5f"
+    },
+    "public/raw/templates/image/22-降噪耳机红底海报/prompt.txt": {
+      "bytes": 3163,
+      "sha256": "1a90b15ad149d9cefb2c2ba93c384eb30bd9ae92c4a6924975af0ea60f7ebc83"
+    },
+    "public/raw/templates/image/23-肌肉跑车红字海报/cover.jpg": {
+      "bytes": 915132,
+      "sha256": "5b7b637928e1bb839341adb226e458b256c518738569e18aebdbc74ec5104348"
+    },
+    "public/raw/templates/image/23-肌肉跑车红字海报/input1.jpg": {
+      "bytes": 142642,
+      "sha256": "90fe7b7263214fbf3b7b10807a8863c1613576551f447b9f049d22a64e03d32e"
+    },
+    "public/raw/templates/image/23-肌肉跑车红字海报/input2.jpg": {
+      "bytes": 227633,
+      "sha256": "33c9070c75c8ad0e298488bedc89fdaa9ceeb58724fd341c5007f77b8b58f8e3"
+    },
+    "public/raw/templates/image/23-肌肉跑车红字海报/prompt.txt": {
+      "bytes": 2756,
+      "sha256": "82ef6addf523f863459bdbe89a153c54a94ba4cbdc8117de06ca47e50293c150"
+    },
+    "public/raw/templates/video/00-萌宠发布会/cover.mp4": {
+      "bytes": 4697607,
+      "sha256": "11eb3adf4b85f82152afecb6b8f7794b77b737ef1cc735882a29e776c58fc881"
+    },
+    "public/raw/templates/video/00-萌宠发布会/input1.jpg": {
+      "bytes": 178578,
+      "sha256": "2a65f597642d9b24891b5cf08ffdeefa6020b9d88866617e34076f608d431d6f"
+    },
+    "public/raw/templates/video/00-萌宠发布会/prompt.txt": {
+      "bytes": 4304,
+      "sha256": "2e8be9f72687cd48f26c6845820300ba64a48d8072ae804d3458c73a51f56e39"
+    },
+    "public/raw/templates/video/01-城市跑酷·生物装甲变身/cover.mp4": {
+      "bytes": 4975818,
+      "sha256": "c2b89e4ba428d31e75298de0cd9a185185d01e93f1d81a4e4b199bb0db87bf22"
+    },
+    "public/raw/templates/video/01-城市跑酷·生物装甲变身/input1.jpg": {
+      "bytes": 216943,
+      "sha256": "06ff7cf80db48adb333fa09317d8f5fc481a7d5789a191a257033150f00b8389"
+    },
+    "public/raw/templates/video/01-城市跑酷·生物装甲变身/prompt.txt": {
+      "bytes": 3572,
+      "sha256": "2c5f6bdf2e2cefefac56a5acb3cd69e5a5701255e3f1eb5d4b388ef5834394c2"
+    },
+    "public/raw/templates/video/02-盗梦空间时间冻结/cover.mp4": {
+      "bytes": 5218952,
+      "sha256": "81f180da28d65d7f4061e31077de439a25faa0f2136f4084b7b21f8277278159"
+    },
+    "public/raw/templates/video/02-盗梦空间时间冻结/input1.jpg": {
+      "bytes": 216943,
+      "sha256": "06ff7cf80db48adb333fa09317d8f5fc481a7d5789a191a257033150f00b8389"
+    },
+    "public/raw/templates/video/02-盗梦空间时间冻结/prompt.txt": {
+      "bytes": 1321,
+      "sha256": "2cfece49f46df7454871a3032560f3972038463b4049181ff28224d1a932f70f"
+    },
+    "public/raw/templates/video/03-乐事薯片包装变形动画/cover.mp4": {
+      "bytes": 4090547,
+      "sha256": "c8ce505de2e26708810ee9ae0f3914421fd6e5592f56e531ab928fef5495fe5e"
+    },
+    "public/raw/templates/video/03-乐事薯片包装变形动画/input1.jpg": {
+      "bytes": 222502,
+      "sha256": "6e5a3ec3f8141f317d62ef5914e3c6ade03905d883ab3862a285bcfd66c78753"
+    },
+    "public/raw/templates/video/03-乐事薯片包装变形动画/prompt.txt": {
+      "bytes": 3448,
+      "sha256": "cb782ae9c4c8a9645ed5eca8196975f27243ba0fff6e1421d3ba2ee233b912d8"
+    },
+    "public/raw/templates/video/04-烟嗓女生卧室唱/cover.mp4": {
+      "bytes": 4624343,
+      "sha256": "e1755d919eff367c37449e0456c852b96a13a6328ebd34491026956f9378fca2"
+    },
+    "public/raw/templates/video/04-烟嗓女生卧室唱/input1.jpg": {
+      "bytes": 718995,
+      "sha256": "856e7a16e0f351c18b88edf1efed9328770fc691b934cf8e5e9df38c6948f583"
+    },
+    "public/raw/templates/video/04-烟嗓女生卧室唱/prompt.txt": {
+      "bytes": 1075,
+      "sha256": "04d4e00e079d391bd0e8b28a272ef2c0720156d1307d03fb862960e73a29834e"
+    },
+    "public/raw/templates/video/05-极速快切男装时尚大片/cover.mp4": {
+      "bytes": 3736885,
+      "sha256": "3eb371d894b4762bf28ab1d0c0a0eda3778b7411fbd506cf1c3f059815351c8e"
+    },
+    "public/raw/templates/video/05-极速快切男装时尚大片/input1.jpg": {
+      "bytes": 694249,
+      "sha256": "342a895012803d5d7687db6cec1e15dc7bcf5025a6bbeeccc9b1c0669bf37906"
+    },
+    "public/raw/templates/video/05-极速快切男装时尚大片/prompt.txt": {
+      "bytes": 2757,
+      "sha256": "87fea7612a9fce366b5e7f8cc5acb4cb27016be072f405208496d6a8ff8ef98e"
+    },
+    "public/raw/templates/video/06-动漫美男真人化妆间/cover.mp4": {
+      "bytes": 4764883,
+      "sha256": "9aec1bdbb4a899cb2ed288c431a3d37873983bd30ba6c1824da19f134f3f01c8"
+    },
+    "public/raw/templates/video/06-动漫美男真人化妆间/input1.jpg": {
+      "bytes": 180100,
+      "sha256": "a6c6587ed687b35ca04c00131a8b3f2b737d3f94d0fcac7e234a6347e854e32d"
+    },
+    "public/raw/templates/video/06-动漫美男真人化妆间/prompt.txt": {
+      "bytes": 2078,
+      "sha256": "b090b0e875373fde47182f3245c587fd97c6ecd2240ea7699fa0f5e6f8191cb8"
+    },
+    "public/raw/templates/video/07-车内妆容变装短片/cover.mp4": {
+      "bytes": 4790913,
+      "sha256": "b2fa53f95917b4069a8b69dfdb9f15133694c2677b01b6b25e1f9e1db356b44e"
+    },
+    "public/raw/templates/video/07-车内妆容变装短片/input1.jpg": {
+      "bytes": 153996,
+      "sha256": "5be495ccdfc3618559648c792c4b1ac7a97567eaa9235e162ce09b856954672c"
+    },
+    "public/raw/templates/video/07-车内妆容变装短片/prompt.txt": {
+      "bytes": 2492,
+      "sha256": "420836204efa0332a60423e576697441aac3d949a46fef9b206355ddce4f6161"
+    },
+    "public/raw/templates/video/08-水手服少女含泪凝望/cover.mp4": {
+      "bytes": 4904594,
+      "sha256": "c1c4cded0a4861be9831138f31b52f1d44da24f3121968c9ecaa1f5ac982232c"
+    },
+    "public/raw/templates/video/08-水手服少女含泪凝望/input1.jpg": {
+      "bytes": 850869,
+      "sha256": "5dbfc5c23da237497516276ffca4fca1a42230a033e27a9b9c3f42a8b7487df4"
+    },
+    "public/raw/templates/video/08-水手服少女含泪凝望/prompt.txt": {
+      "bytes": 1954,
+      "sha256": "5e82f42431a1410cb9da09bf2debc11a25c800bbcb17ddf9b1ebeca8f9adb47a"
+    },
+    "public/raw/templates/video/09-柯基滑板街头特技/cover.mp4": {
+      "bytes": 4767107,
+      "sha256": "66c1350a6a03cc3cc20cc62839d37d7e84daa988717e2a3b91829dc128e1a13e"
+    },
+    "public/raw/templates/video/09-柯基滑板街头特技/input1.jpg": {
+      "bytes": 255879,
+      "sha256": "8c4a10fc906962de2e727deb77d8df6ef9cccdf47b55451038ed3d8343a813db"
+    },
+    "public/raw/templates/video/09-柯基滑板街头特技/input2.jpg": {
+      "bytes": 279696,
+      "sha256": "b851203696ac9d2d15cd19e1a79216e6b709853f806486f90414d860920c1d12"
+    },
+    "public/raw/templates/video/09-柯基滑板街头特技/input3.jpg": {
+      "bytes": 903161,
+      "sha256": "9b734874e36b4c96dc60c604313773d3697e677fa1a15bc63dc3a97869f36c68"
+    },
+    "public/raw/templates/video/09-柯基滑板街头特技/prompt.txt": {
+      "bytes": 2592,
+      "sha256": "a3c8b851442bf5e89c598c2cb0201d62a2c99550b5b66b1de22a90cea0421315"
+    },
+    "public/raw/templates/video/10-赛博女刺客屋顶追逐/cover.mp4": {
+      "bytes": 4923610,
+      "sha256": "e8c9984e350634f5c04411916280816dc027db87bb44ef6825b72f3d53c88a0e"
+    },
+    "public/raw/templates/video/10-赛博女刺客屋顶追逐/input1.jpg": {
+      "bytes": 983928,
+      "sha256": "6f0260f25b3423a6040bb283b6d64478083585e6b4291a0163142a61db037625"
+    },
+    "public/raw/templates/video/10-赛博女刺客屋顶追逐/input2.jpg": {
+      "bytes": 374896,
+      "sha256": "b7b83bf3ff73bb852a9435cb5e5845b55119c2397c8fc90843cfc3a4f2b3aaa5"
+    },
+    "public/raw/templates/video/10-赛博女刺客屋顶追逐/prompt.txt": {
+      "bytes": 1072,
+      "sha256": "bf4caf228f7c3b661dddea990c9b62bcae93cb2bb078c45e7883a35717a3ef31"
+    },
+    "public/raw/templates/video/11-战损仙侠少女林间自拍/cover.mp4": {
+      "bytes": 4783775,
+      "sha256": "efb13445119f31b8e2db9d2debc778d94f4429bc7106dd020258da86dc439062"
+    },
+    "public/raw/templates/video/11-战损仙侠少女林间自拍/input1.jpg": {
+      "bytes": 269267,
+      "sha256": "b3fc6c8081f92baa40f3a36a7f1c2297cb97016b67d2508cd6c0e5171ace69c6"
+    },
+    "public/raw/templates/video/11-战损仙侠少女林间自拍/prompt.txt": {
+      "bytes": 2353,
+      "sha256": "49e29e26014608f583b3d1cf7a08b2cabf94bd8b4eec3bf322a127a900f823fd"
+    },
+    "public/raw/templates/video/12-民国江南烟雨回眸/cover.mp4": {
+      "bytes": 15514342,
+      "sha256": "56141dd50045440d6b6fcb46fe3b72198d478619181032c3ee0ebe7d7521b147"
+    },
+    "public/raw/templates/video/12-民国江南烟雨回眸/input1.jpg": {
+      "bytes": 207070,
+      "sha256": "b33bdeb616b4ffe9691c9420841ce882b74632c09f8a29309d034122bd0c52ed"
+    },
+    "public/raw/templates/video/12-民国江南烟雨回眸/input2.jpg": {
+      "bytes": 199273,
+      "sha256": "49d1cc7b279702fbd7c43b16c8e86e8aef19b93c5d3ef8e84b1665009496aae8"
+    },
+    "public/raw/templates/video/12-民国江南烟雨回眸/prompt.txt": {
+      "bytes": 3667,
+      "sha256": "68c9196238a925a96d4235a184a68b7dcbc9d9d734445e297bfa8c1c2846d8fa"
+    },
+    "public/raw/templates/video/13-病娇公子烛下卧榻/cover.mp4": {
+      "bytes": 946035,
+      "sha256": "3973f4fb442b0e5eba0b1fd72a8e87d97125372a5f7a5b2b34f7ab8b5bcb4644"
+    },
+    "public/raw/templates/video/13-病娇公子烛下卧榻/input1.jpg": {
+      "bytes": 274406,
+      "sha256": "ed58ea30ece34fec9bdcb0fc6ec19313b3ab56339e3d7b2896df8ceac536c5c5"
+    },
+    "public/raw/templates/video/13-病娇公子烛下卧榻/prompt.txt": {
+      "bytes": 2780,
+      "sha256": "59899facb65428632cced4788a676de0fb94472356093cfe807c288f8b4f9de2"
+    },
+    "public/raw/templates/video/14-万剑古战场神女对决狂战士/cover.mp4": {
+      "bytes": 4772135,
+      "sha256": "d2e3438a597f0c60af4242668c2d6689205273e5fdfb44e7f0465d7e2ff49f88"
+    },
+    "public/raw/templates/video/14-万剑古战场神女对决狂战士/input1.jpg": {
+      "bytes": 555767,
+      "sha256": "5899d17442112a80f8f37b4605c957822baf290df98c8869e96e92813cac9fb3"
+    },
+    "public/raw/templates/video/14-万剑古战场神女对决狂战士/prompt.txt": {
+      "bytes": 2475,
+      "sha256": "c849eef927ba1a1cda15171cd33d7b77373dc18622b0fb1775ee19f29ff31baf"
+    },
+    "public/raw/templates/video/15-欧美青春电影人像/cover.mp4": {
+      "bytes": 4973140,
+      "sha256": "8bef8578632c2072a3ba4f4ee845704fc1ad42fda46b466277ae53f03d02fa43"
+    },
+    "public/raw/templates/video/15-欧美青春电影人像/input1.webp": {
+      "bytes": 212287,
+      "sha256": "a0e4a1db7afc12e44156c112a908631d3546b84bae736f1f6ffcabf3ed496181"
+    },
+    "public/raw/templates/video/15-欧美青春电影人像/prompt.txt": {
+      "bytes": 2402,
+      "sha256": "709ab438df4d6c2bb14a1e336930d51453371eb37f5b4eb47bc85353ddcf4817"
+    },
+    "public/raw/templates/video/16-3D动漫第一人称互动/cover.mp4": {
+      "bytes": 15964487,
+      "sha256": "b77a1dcdf7687d610af73778b52cef314055f946daf571e04199411e84859492"
+    },
+    "public/raw/templates/video/16-3D动漫第一人称互动/input1.jpg": {
+      "bytes": 1181798,
+      "sha256": "8c7f4ec7958e236dd2bc729228f7bd432beea66731b0e0241e8103e5356a99ab"
+    },
+    "public/raw/templates/video/16-3D动漫第一人称互动/prompt.txt": {
+      "bytes": 2790,
+      "sha256": "e0f9634dfb3ecf72f66b257a94cf1e668501fcecfb13fe57ff75cea0dceeff5f"
+    },
+    "public/raw/templates/video/17-韩系女主咖啡杯转场变装/cover.mp4": {
+      "bytes": 4570623,
+      "sha256": "63bd20e3d96510c906fead78fff1f0c3c2a2025134ecd426e9c641eaa1b1fd55"
+    },
+    "public/raw/templates/video/17-韩系女主咖啡杯转场变装/input1.jpg": {
+      "bytes": 717596,
+      "sha256": "f7cf5f52dc776ca262c19cd3f4fb4a56afaaf1870f10195c23e6737707bad545"
+    },
+    "public/raw/templates/video/17-韩系女主咖啡杯转场变装/prompt.txt": {
+      "bytes": 3149,
+      "sha256": "83aa060230f72eeaa0bd543165b51946c7f004d8f2b698b0d72622dbfee30172"
+    },
+    "public/raw/templates/video/18-影院大白鲨惊吓观众/cover.mp4": {
+      "bytes": 4947058,
+      "sha256": "1fae56baf7212c295fd854510aabcfb2653fd44bde62ffd7962a589c9c2f3a25"
+    },
+    "public/raw/templates/video/18-影院大白鲨惊吓观众/prompt.txt": {
+      "bytes": 844,
+      "sha256": "2177f8e16edf11e6c05f5375f287d55ba6393bf772300e1d7c5c31876e040c93"
+    },
+    "public/raw/templates/video/19-夏日泳池水枪少女/cover.mp4": {
+      "bytes": 4048190,
+      "sha256": "46ffebb3484cb2c42a33fdc013579cb93a929fbe1e88e9d843f4f09b5d7e2e45"
+    },
+    "public/raw/templates/video/19-夏日泳池水枪少女/input1.jpg": {
+      "bytes": 128255,
+      "sha256": "29127a30ab9991fbd7325c57db80d479214a93b6fee98ea776eb1e2e0b9ea60f"
+    },
+    "public/raw/templates/video/19-夏日泳池水枪少女/input2.jpg": {
+      "bytes": 239746,
+      "sha256": "968e4a39edefd85827761915c4111b0478c0bef22030b5ef740beebd89dd3c0e"
+    },
+    "public/raw/templates/video/19-夏日泳池水枪少女/prompt.txt": {
+      "bytes": 3357,
+      "sha256": "d288ce327937e1a003c8c85c1df9d42528629d122d7bf693740634254e215deb"
+    },
+    "public/raw/templates/video/20-FPV穿越古印度王国/cover.mp4": {
+      "bytes": 4988458,
+      "sha256": "a92fad366cd89ac7c349c179f5c0fbee45068651ab01040bf1c92522f001f806"
+    },
+    "public/raw/templates/video/20-FPV穿越古印度王国/prompt.txt": {
+      "bytes": 595,
+      "sha256": "dd4101fa98360d8b443acbbe4d5b8b246c677e973159ea7f4fb2dfb68b3b3365"
+    },
+    "public/raw/templates/video/21-玄铁长枪古战场降魔/cover.mp4": {
+      "bytes": 15659773,
+      "sha256": "bb87818c8a3e5aa5ee5d684900c725bbf24d238be8e2d66f562ef18ae7ffc1e0"
+    },
+    "public/raw/templates/video/21-玄铁长枪古战场降魔/input1.jpg": {
+      "bytes": 339827,
+      "sha256": "42210592073901997212f596d2482a601c54bbef68c1cd79473a10f4a88f7195"
+    },
+    "public/raw/templates/video/21-玄铁长枪古战场降魔/prompt.txt": {
+      "bytes": 4202,
+      "sha256": "455bb53fa1aca6d53d8f1aba3e50951b0c511efa2336a83f4fdd8584cb6aea24"
+    },
+    "public/raw/templates/video/22-K-POP_字体动效片头/cover.mp4": {
+      "bytes": 6128002,
+      "sha256": "fd380d9a2405a3d4da14f7838e54bf51c320a6235d577ef799cea41bc66296ff"
+    },
+    "public/raw/templates/video/22-K-POP_字体动效片头/input1.jpg": {
+      "bytes": 227559,
+      "sha256": "597e7cc7a7c25f3d0afe5ab97915bccc1ec0a49e11825a9b8d7c4a71bc8fdea8"
+    },
+    "public/raw/templates/video/22-K-POP_字体动效片头/input2.jpg": {
+      "bytes": 373773,
+      "sha256": "cd9693b014629fe193b209b9a4f26de63c30380d175ac73a5600376bacc3c340"
+    },
+    "public/raw/templates/video/22-K-POP_字体动效片头/prompt.txt": {
+      "bytes": 32,
+      "sha256": "bc554e18031ad0c328be7d82e929ef97acfaa95d5ab5fba90835a96e2d83379f"
+    },
+    "public/raw/templates/video/23-黏土雨天变晴天/cover.mp4": {
+      "bytes": 4534731,
+      "sha256": "792e636c4762b8adbff0d5aed3fc5561847fc6d48ed962c5d7ecd94f660e241a"
+    },
+    "public/raw/templates/video/23-黏土雨天变晴天/input1.jpg": {
+      "bytes": 130322,
+      "sha256": "d811fa4e2c0a11ac66ee6bab074ecb9519d4dabf81d01511a7ef76e2ce3898d2"
+    },
+    "public/raw/templates/video/23-黏土雨天变晴天/input2.jpg": {
+      "bytes": 199036,
+      "sha256": "6b4f15782b9fe90c87a1c027d66145f4962fbc1756c429611c1dbbf494396cea"
+    },
+    "public/raw/templates/video/23-黏土雨天变晴天/prompt.txt": {
+      "bytes": 2737,
+      "sha256": "b68bf53be3ee22444e6ac43ee7ccb717caf3598421f5397716f7932395add9c4"
+    },
+    "public/raw/templates/video/24-糖果积木饮料罐/cover.mp4": {
+      "bytes": 4411101,
+      "sha256": "935335354f79653601f9fd6787edd54c92d9ecedec64f3c191d315b3363e49fe"
+    },
+    "public/raw/templates/video/24-糖果积木饮料罐/input1.jpg": {
+      "bytes": 173278,
+      "sha256": "2142f4af46bb8bf7aa7c4ed877166a0f72a32a606406028971e1fc545329a171"
+    },
+    "public/raw/templates/video/24-糖果积木饮料罐/prompt.txt": {
+      "bytes": 7817,
+      "sha256": "9e6bdf8009a861fe3dea37e8959af1077313417780b6d6a68d0f67ee5770514d"
+    },
+    "public/raw/templates/video/25-可可秘境微缩巧克力世界/cover.mp4": {
+      "bytes": 4327291,
+      "sha256": "5683e48be5d63f62d76ba53b278243fe64e7b12e4e4b3a023e4fa78d8f173e8f"
+    },
+    "public/raw/templates/video/25-可可秘境微缩巧克力世界/input1.jpg": {
+      "bytes": 280831,
+      "sha256": "22492617ba3492e37cd3308a1ff80fdd2f6cc68cea268afbbe0f5c08896bdb27"
+    },
+    "public/raw/templates/video/25-可可秘境微缩巧克力世界/prompt.txt": {
+      "bytes": 2949,
+      "sha256": "34755951429fcd32fadac0fc6bcb85ce5d9ba3d57a89fee71f1389697d5fe3f8"
+    },
+    "public/rec/recA.mp4": {
+      "bytes": 290022896,
+      "sha256": "4adcb4be960514c66ac9c3879742e974f2ebced2b2a255591d80ce769b162f83"
+    },
+    "public/rec/recB.mp4": {
+      "bytes": 180869384,
+      "sha256": "905a70b6de41f1d235c9389e5353d736ff49181cec5fa4e25a9e3914a4765a7d"
+    },
+    "public/rec/recC.mp4": {
+      "bytes": 549165469,
+      "sha256": "1c35f1a2d35738eeb13f189666f1b3a7756c21b8e41fff9a6cb91540c3f584d7"
+    },
+    "public/rec/recC2.mp4": {
+      "bytes": 98679101,
+      "sha256": "e3dd33a9db54c6b9f41e3eb9c795c3b4628801a6de47a2c435f419a72f8be54c"
+    },
+    "public/rec/recD.mp4": {
+      "bytes": 80889824,
+      "sha256": "efadd595e3fe5d160a2503e68d34cb68e192f2f251fb538fa03a0952603b03eb"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 19756844,
+      "sha256": "d031c1b86859573371eaa56b5c22a1a027b1469d60e85ce1d075cad523c9b7c3"
+    }
+  }
+}
