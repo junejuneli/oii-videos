@@ -64,7 +64,63 @@ importers:
         version: link:../../packages/kit
       '@remotion/cli':
         specifier: 'catalog:'
-        version: 4.0.530(postcss@8.5.29)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+      '@remotion/media':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.3
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.3(react@19.2.3)
+      remotion:
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.2.7
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  videos/2026-10-grid-split:
+    dependencies:
+      '@oii/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
+      '@remotion/cli':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+      '@remotion/media':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.3
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.3(react@19.2.3)
+      remotion:
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.2.7
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  videos/2026-10-local-edit:
+    dependencies:
+      '@oii/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
+      '@remotion/cli':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@remotion/media':
         specifier: 'catalog:'
         version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -93,6 +149,34 @@ importers:
       '@remotion/cli':
         specifier: 'catalog:'
         version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+      '@remotion/media':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.3
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.3(react@19.2.3)
+      remotion:
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.2.7
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  videos/2026-10-template-library:
+    dependencies:
+      '@oii/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
+      '@remotion/cli':
+        specifier: 'catalog:'
+        version: 4.0.530(postcss@8.5.29)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@remotion/media':
         specifier: 'catalog:'
         version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)

@@ -3,6 +3,7 @@
 ## 先读
 
 - 新视频从 `.claude/skills/oii-video-new` 开始；每个视频的上下文在 `videos/<slug>/brief.md`，开工前先读。
+- 视频类型（功能介绍 / 自媒体教程）和各自的制作思路见 [`docs/视频制作思路.md`](./docs/视频制作思路.md)。
 - 创作流程 skill：`oii-canvas-record`（录屏）→ `oii-one-take-edit`（剪辑）→ `oii-highlight`（标注）→ `oii-brand-package`（包装）→ `oii-render-release`（出片），改意见按 `oii-feedback-loop` 处理。
 - Remotion API 问题查 `remotion-*` skill（由 `skills-lock.json` 管理，不要手改；真实文件在 `.agents/skills/`，`.claude/skills/` 里是软链接）。
 
