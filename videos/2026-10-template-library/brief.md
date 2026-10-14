@@ -1,9 +1,9 @@
 # 模板 功能介绍
 
 - 创建：2026-10-14
-- 状态：素材齐（录屏 recA/B/C/C2/D + 案例），待剪辑
-- 成片：`out/template-library-vN.mp4`（本地，不进 git）
-- 规格：1920×1080（16:9），30fps，目标约 55s；形式、包装沿用 `2026-10-grid-split`
+- 状态：✅ 成品 v4
+- 成片：[1080p（Release）](https://github.com/junejuneli/oii-videos/releases/tag/template-library-v4)；本地 `out/template-library-v4.mp4`（母版）、`-share.mp4`（分享版）
+- 规格：1920×1080（16:9），30fps，成片 112s；形式、包装沿用 `2026-10-grid-split`
 - **无口播**：只用字幕 + 花字 + 贴纸 + 背景音乐（make-music.mjs 128 BPM）
 - **不玩梗**（用户定）：开头用说明性短句
 - **文案红线**：不写“新功能/全新/重磅”；不说省积分
