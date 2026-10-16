@@ -1,4 +1,5 @@
-// Shared language for the Hogi* components, taken from hogi-marketing-kit:
+// Shared language for the Hogi* components (spec: docs/hogi-design-system/DESIGN.md;
+// values mirror docs/hogi-design-system/tokens.css), taken from hogi-marketing-kit:
 // poster type (Google Sans Flex at width 120, weights 550/600; MiSans for Chinese)
 // with -0.01em tracking and no outlines, brand colours from src/brand.json, and
 // the brand motion (16px rise + 600ms reveal, 900ms colour settle, 180ms exit).

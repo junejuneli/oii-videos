@@ -13,6 +13,7 @@ packages/kit/       @oii/kit：跨视频复用的 Remotion 组件
   brand/              水印、片尾、LogoChip
   hogi/               hogi-marketing-kit 风格：海报文字、粉绿强调、聚光、扫光转场、打字
 packages/gallery/   所有可复用组件的实时预览页（pnpm gallery:serve）
+docs/hogi-design-system/  Hogi* 组件的设计规范（DESIGN.md）和取值（tokens.css）
 videos/<YYYY-MM-slug>/  每个视频一个工程
   brief.md            需求、素材、结构、迭代记录
   src/                这个视频专属的代码

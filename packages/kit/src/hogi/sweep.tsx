@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from "react";
 import { AbsoluteFill, Img, useCurrentFrame, useVideoConfig } from "remotion";
 import { BRAND } from "../brand";
 
-/** skill/hogi-video-sweep/assets/sweep-defaults.json */
+/** skill/hogi-video-sweep/assets/sweep-defaults.json; mirrored as --oii-sweep-* in docs/hogi-design-system/tokens.css */
 export const SWEEP_DEFAULTS = {
   count: 2,
   /** Seconds per pass. */

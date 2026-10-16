@@ -17,7 +17,7 @@ description: OiiOii 视频的品牌包装规范与组件：封面、步骤字幕
 
 ## hogi-marketing-kit 风格组件（`@oii/kit` 的 `Hogi*`）
 
-按 hogi-marketing-kit 的海报和扫光规范做的一套，和上面的综艺风格并存，旧视频不受影响。预览见 `pnpm gallery:serve`。
+按 hogi-marketing-kit 的海报和扫光规范做的一套，和上面的综艺风格并存，旧视频不受影响。完整规范和取值见 `docs/hogi-design-system/DESIGN.md` 与 `tokens.css`（含与产品设计系统的差异），预览见 `pnpm gallery:serve`。
 
 - 文字：Google Sans Flex（宽度 120，550/600）+ MiSans，-0.01em 字距，不描边不投影，靠黑色渐变压暗背景。白字，强调词用粉色 `#FF6CC2`（`highlight`）。
 - 动效：上移 16px + 600ms 出现（`cubic-bezier(0.22,1,0.36,1)`），标题粉 → 白 900ms，退场 180ms（`HOGI_MOTION`）。

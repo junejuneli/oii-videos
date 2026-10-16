@@ -6,6 +6,7 @@
 - 视频类型（功能介绍 / 自媒体教程）和各自的制作思路见 [`docs/视频制作思路.md`](./docs/视频制作思路.md)。
 - 创作流程 skill：`oii-canvas-record`（录屏）→ `oii-one-take-edit`（剪辑）→ `oii-highlight`（标注）→ `oii-brand-package`（包装）→ `oii-render-release`（出片），改意见按 `oii-feedback-loop` 处理。
 - 现有组件长什么样，跑 `pnpm gallery:serve` 看实时预览（`packages/gallery`）；新增或修改 kit 组件时同步加预览。
+- `Hogi*` 组件的设计规范和取值在 [`docs/hogi-design-system/`](./docs/hogi-design-system/)（`DESIGN.md` + `tokens.css`），改值时两边一起改。
 - Remotion API 问题查 `remotion-*` skill（由 `skills-lock.json` 管理，不要手改；真实文件在 `.agents/skills/`，`.claude/skills/` 里是软链接）。
 
 ## 规则
