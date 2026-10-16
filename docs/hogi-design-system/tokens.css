@@ -1,0 +1,139 @@
+/* OiiOii 视频 · Hogi tokens
+ *
+ * 视频画面（1920×1080，30fps）里 Hogi* 组件用到的全部取值。规范说明见同目录 DESIGN.md。
+ * 来源：Hogi Design System（hogi-design-system-playground@145b5f7）+ hogi-marketing-kit@86afed2。
+ * 注释里的 “= DS --xxx” 表示与产品设计系统同值同义；“营销例外” 见 DESIGN.md 对应章节。
+ *
+ * 代码镜像（改这里时同步改）：
+ *   packages/kit/src/hogi/base.tsx   HOGI、HOGI_FONT、HOGI_MOTION
+ *   packages/kit/src/hogi/text.tsx   字号、版式、遮罩强度
+ *   packages/kit/src/hogi/emphasis.tsx / typing.tsx
+ *   packages/kit/src/hogi/sweep.tsx  SWEEP_DEFAULTS
+ *   packages/kit/src/brand/index.tsx BRAND.fonts、BRAND.wordmark*、BRAND.sweepLogo
+ * 帧数 = round(ms × 30 / 1000)。 */
+
+/* ===== 字体（brand/fonts，由 hogi-marketing-kit 的 TTF 转成 woff2） ===== */
+@font-face {
+	font-family: "Hogi Sans"; /* Google Sans Flex · wdth 120 · wght 550 */
+	src: url("../../brand/fonts/GoogleSansFlex-550-120.woff2") format("woff2");
+	font-weight: 550;
+}
+@font-face {
+	font-family: "Hogi Sans"; /* Google Sans Flex · wdth 120 · wght 600 */
+	src: url("../../brand/fonts/GoogleSansFlex-600-120.woff2") format("woff2");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "MiSans"; /* MiSans VF，可变字重 */
+	src: url("../../brand/fonts/MiSansVF.woff2") format("woff2");
+	font-weight: 100 900;
+}
+
+:root {
+	color-scheme: dark;
+
+	/* ===== 颜色 ===== */
+	--oii-canvas: #000; /* = DS --neutral-background */
+	--oii-text: #fff; /* = DS --neutral-content；所有正文和标题 */
+	--oii-text-emphasis: #ff6cc2; /* = DS --pink-text；强调词、步骤编号、当前进度、MemeTitle 大标题 */
+	--oii-pink: #ff1eb4; /* = DS --pink-content；视频组件里不直接使用，留给品牌主操作 */
+	--oii-green: #d2ff5e; /* = DS --green；营销例外：强调标记（Spotlight 边、Ripple 第二环、结果标签） */
+	--oii-on-green: #000; /* 绿底上的文字 */
+
+	/* 提示框（hogi-promo-poster 工作区 .toast） */
+	--oii-toast-surface: rgb(44 44 46 / 0.92);
+	--oii-toast-border: rgb(255 255 255 / 0.19); /* 1.5px */
+	--oii-toast-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+	--oii-toast-blur: 12px;
+
+	/* 细线与进度 */
+	--oii-divider: rgb(255 255 255 / 0.2); /* 徽标分隔线，海报 badge-divider opacity 0.2 */
+	--oii-rail-done: rgb(255 255 255 / 0.6);
+	--oii-rail-todo: rgb(255 255 255 / 0.2); /* ≈ DS --neutral-content-a20 */
+	--oii-track: rgb(255 255 255 / 0.15);
+
+	/* 压暗（海报靠黑色渐变保证可读，不描边不投影） */
+	--oii-scrim-end-titles-bottom: 0.62; /* 620px 高 */
+	--oii-scrim-end-titles-top: 0.4; /* 260px 高 */
+	--oii-scrim-step-caption: 0.55; /* 顶部 380px */
+	--oii-scrim-top-headline: 0.55; /* 顶部 340px */
+	--oii-scrim-brand-mark: 0.45; /* 顶部 240px */
+	--oii-scrim-meme-title: 0.6; /* 底部 560px */
+	/* 底部渐变形状：0% 透明 → 80% 满强度 → 100% 满强度（海报 lowerStops）；顶部为单段线性 */
+	--oii-spotlight-dim: rgb(0 0 0 / 0.62); /* Spotlight 四周压暗，边缘 10px 高斯羽化 */
+	--oii-callout-shade: rgb(0 0 0 / 0.6); /* Callout 背后的局部径向压暗，向外扩 60px / 90px */
+
+	/* ===== 字体与字号（画面像素，1920×1080） ===== */
+	--oii-font: "Hogi Sans", "MiSans", sans-serif; /* 拉丁走 Google Sans Flex，中文回落 MiSans */
+	--oii-weight-headline: 550; /* 海报大标题 */
+	--oii-weight-text: 600; /* 其余文字、徽标、标签 */
+	--oii-tracking: -0.01em; /* 海报 letterSpacingEm */
+	--oii-tracking-badge: -0.02em; /* 徽标文案（海报 badge） */
+
+	--oii-type-display-size: 128px; /* EndTitles 标题、MemeTitle 大标题 */
+	--oii-type-display-line: 1.1;
+	--oii-type-display-weight: 550;
+	--oii-type-headline-size: 80px; /* TopHeadline */
+	--oii-type-headline-line: 1.1;
+	--oii-type-headline-weight: 550;
+	--oii-type-title-size: 72px; /* StepCaption 步骤名 */
+	--oii-type-title-line: 1.15;
+	--oii-type-title-weight: 600;
+	--oii-type-kicker-size: 64px; /* MemeTitle 引子；Callout 同字号（录屏像素） */
+	--oii-type-kicker-line: 1.25; /* Callout 用 1.15 */
+	--oii-type-kicker-weight: 600;
+	--oii-type-label-size: 40px; /* Sticker */
+	--oii-type-pill-size: 36px; /* SpeedPill */
+	--oii-type-index-size: 28px; /* StepCaption 编号 “02 / 05” */
+	--oii-type-body-line: 1.2; /* label / pill / index 的行高 */
+	--oii-type-badge-scale: 0.96; /* 徽标文案 = 0.96 × logo 高度（48 → 46px），行高 1.26 */
+
+	/* ===== Logo ===== */
+	--oii-wordmark-ratio: 2.984; /* 143.238 / 48，brand/logo/oiioii-wordmark-*.svg */
+	--oii-badge-logo-height: 48px; /* BrandMark；EndTitles 用 56px */
+	--oii-badge-gap: 0.5; /* × logo 高度（48 → 24px），logo | 分隔线 | 文案 */
+	--oii-badge-divider-height: 0.75; /* × logo 高度，宽 2px */
+	--oii-sweep-logo-width: 12.5%; /* 画面宽度百分比，brand/logo/oii-sweep-logo.svg */
+	--oii-sweep-logo-inset: 2.5%; /* 右、上边距都按画面宽度算 */
+
+	/* ===== 动效（brand.json · motion） ===== */
+	--oii-ease: cubic-bezier(0.22, 1, 0.36, 1);
+	--oii-reveal: 600ms; /* 18 帧，配合上移 */
+	--oii-rise: 16px;
+	--oii-settle: 900ms; /* 27 帧，强调色 → 白 */
+	--oii-exit: 180ms; /* ≈ 5 帧，Sequence 最后几帧 */
+	--oii-exit-end-titles: 400ms; /* 12 帧，落版接片尾 Logo */
+	--oii-stagger-line: 200ms; /* 6 帧，EndTitles 逐行；MemeTitle 第二行晚 8 帧 */
+	--oii-stagger-part: 100ms; /* 3 帧，StepCaption 编号 → 标题 → 进度条 */
+	--oii-ripple-ring: 600ms; /* 18 帧，半径 12 → 70 录屏像素，描边 5 */
+	--oii-ripple-offset: 167ms; /* 5 帧，粉环之后绿环 */
+	--oii-caret-blink: 500ms; /* 15 帧亮 / 15 帧灭；打字时常亮 */
+
+	/* ===== 版式 ===== */
+	--oii-frame-width: 1920px;
+	--oii-frame-height: 1080px;
+	--oii-rec-width: 3024px; /* 录屏像素 = 1512×772 视口 × 2，强调组件用这套坐标 */
+	--oii-rec-height: 1544px;
+	--oii-safe-left: 96px;
+	--oii-safe-top: 72px; /* BrandMark 64px，TopHeadline 84px */
+	--oii-safe-bottom: 100px; /* EndTitles 110px */
+
+	/* ===== 扫光转场（skill/hogi-video-sweep/assets/sweep-defaults.json） ===== */
+	--oii-sweep-count: 2;
+	--oii-sweep-duration: 1.2s;
+	--oii-sweep-hold: 2.2s;
+	--oii-sweep-direction: right;
+	--oii-sweep-angle: 24deg;
+	--oii-sweep-style: gradient;
+	--oii-sweep-width: 0.22;
+	--oii-sweep-softness: 0.72;
+	--oii-sweep-feather: 0.168;
+	--oii-sweep-intensity: 0.64;
+	--oii-sweep-glow: 0.6;
+	--oii-sweep-color-a: #ff6cc2; /* = DS --pink-text */
+	--oii-sweep-color-b: #d2ff5e; /* = DS --green */
+	--oii-sweep-easing: smooth; /* p² (3 − 2p) */
+	--oii-sweep-shape: ripple;
+	--oii-sweep-curvature: 0.01;
+	--oii-sweep-waves: 3;
+}

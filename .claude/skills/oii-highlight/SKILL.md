@@ -18,6 +18,8 @@ description: 在录屏上做标注强调：流光圆角矩形（GlowRect）、�
 | `Sticker` | 综艺花字贴纸（画面坐标 1920×1080） | 弹入 + 轻晃 + 收尾缩小。粉底白字＝关键操作，黄/绿底＝结果。见下方“花字与贴纸” |
 | `MemeTitle` | 顶部大号描边玩梗标题（多行依次弹出） | 痛点开场用 |
 | `StepCaption` | 步骤卡片 | 用 `placement="top-left" bold`，小而醒目，不抢画面 |
+| `HogiSpotlight` / `HogiRipple` / `HogiCallout` | hogi 风格的框选、点击、气泡 | 四周压暗 + 细绿框 / 粉绿双环 / 海报大字。和 `Hogi*` 文字组件一起用，见 oii-brand-package |
+| `HogiTypeReveal` | 打字效果 | 逐字揭开录屏里已有的文字，带光标，节奏有快有慢，标点处停顿。`lines[{y, h, w, chars}]` + `text` |
 
 ## 流光框的尺寸与粗细（已验证的取值）
 

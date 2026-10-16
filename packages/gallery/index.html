@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OiiOii 复用 UI</title>
+<style>
+/* Layout: the hogi studio gallery (hogi-marketing-kit · hogi-promo-poster/assets/web/style.css): sticky white toolbar with the wordmark, grey workspace, title + count, filter row, two-up dark preview cards that expand into a large controlled player. Light only, as in the studio. */
+:root {
+  color-scheme: light;
+  --page: #f5f5f7;
+  --toolbar-height: 64px;
+  --ink: #1d1d1f;
+  --muted: #737378;
+  --soft: #86868b;
+  --line: #e5e5e8;
+  --accent: #D2FF5E; /* hogi brand.json · palette.green */
+  --surface: #111111;
+  --surface-line: #171719;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", sans-serif;
+  color: var(--ink);
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font-size: 13px; -webkit-font-smoothing: antialiased; }
+button { font: inherit; cursor: pointer; color: inherit; -webkit-tap-highlight-color: transparent; transition: background .15s, box-shadow .15s; }
+button, a { outline-offset: 3px; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 65%, transparent); }
+[hidden] { display: none !important; }
+
+.topbar {
+  height: var(--toolbar-height); display: flex; align-items: center; gap: 24px;
+  padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px));
+  background: #ffffffeb; border-bottom: 1px solid var(--line); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+}
+.brand-logo { display: block; width: 72px; height: auto; }
+
+.workspace {
+  padding-block: 34px 40px;
+  padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px));
+  min-width: 0;
+}
+.back-button { display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; color: var(--muted); padding: 0; margin-bottom: 18px; font-size: 12px; }
+.back-button:hover { color: var(--ink); }
+.back-button svg { width: 14px; height: 14px; rotate: 180deg; }
+.workspace-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 25px; }
+.workspace-heading h1 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 28px; letter-spacing: -1px; font-weight: 600; line-height: 1.2; }
+.workspace-heading h1 .count { font-size: 14px; color: var(--soft); font-weight: 400; vertical-align: middle; margin-left: 7px; letter-spacing: 0; }
+.workspace-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 21px; }
+.filters { display: flex; gap: 4px; flex-wrap: wrap; }
+.filters button { border: 0; padding: 6px 12px; border-radius: 6px; background: transparent; color: var(--muted); font-size: 12px; }
+.filters button:hover { color: var(--ink); }
+.filters button[aria-pressed=true] { color: var(--ink); background: #e7e7ec; font-weight: 500; }
+
+.video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 26px; align-items: start; }
+.video-card { min-width: 0; }
+.video-surface {
+  aspect-ratio: 16 / 9; max-width: 100%; background: var(--surface); border: 1px solid var(--surface-line);
+  border-radius: 12px; position: relative; overflow: hidden;
+}
+.stage { position: absolute; inset: 0; }
+.video-open { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: inherit; padding: 0; background: transparent; cursor: zoom-in; }
+.video-open:hover { background: #ffffff06; }
+.video-open:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.video-card:hover .video-surface { box-shadow: 0 4px 16px #00000012; }
+.video-error { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; font-size: 12px; line-height: 1.8; background: #252527; color: #ffffff; margin: 0; }
+.video-card-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 13px 2px 0; }
+.video-card-footer strong { font-size: 12px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.video-card-footer span { font-size: 10px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.canvas-tip { font-size: 11px; line-height: 1.6; text-align: center; color: var(--soft); margin: 30px 0 4px; }
+
+/* Focus: one card, large, with controls. */
+.video-grid.focus-mode { display: block; }
+.focus-mode .video-surface { width: min(100%, calc((100vh - 230px) * 16 / 9)); min-width: min(100%, 560px); margin: 0 auto; }
+.focus-mode .video-card-footer, .focus-mode .video-open { display: none; }
+.focus-mode .video-card.selected .video-surface { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+
+@media (min-width: 1550px) {
+  .workspace { padding-left: max(48px, env(safe-area-inset-left, 0px)); padding-right: max(48px, env(safe-area-inset-right, 0px)); }
+  .video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1100px) {
+  .workspace { padding-block: 28px 32px; padding-left: max(26px, env(safe-area-inset-left, 0px)); padding-right: max(26px, env(safe-area-inset-right, 0px)); }
+  .video-grid { gap: 24px 20px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding-left: max(14px, env(safe-area-inset-left, 0px)); padding-right: max(14px, env(safe-area-inset-right, 0px)); }
+  .brand-logo { width: 64px; }
+  .workspace { padding-block: 25px 28px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .workspace-heading { margin-bottom: 20px; }
+  .workspace-heading h1 { font-size: 25px; }
+  .workspace-toolbar { margin-bottom: 20px; }
+  .filters { gap: 0; }
+  .filters button { padding: 6px 8px; }
+  .video-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .focus-mode .video-surface { min-width: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <img class="brand-logo" src="brand/logo/oiioii-wordmark-black.svg" width="72" height="24" alt="OiiOii">
+</header>
+
+<main class="workspace">
+  <button id="back" class="back-button" type="button" hidden><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>返回画廊</button>
+  <div class="workspace-heading">
+    <h1><span id="heading">复用 UI</span><span id="count" class="count">18</span></h1>
+  </div>
+  <div id="toolbar" class="workspace-toolbar">
+    <div id="filters" class="filters" role="group" aria-label="按类别筛选">
+      <button type="button" data-filter="all" aria-pressed="true">全部</button>
+      <button type="button" data-filter="brand" aria-pressed="false">品牌</button>
+      <button type="button" data-filter="text" aria-pressed="false">文字</button>
+      <button type="button" data-filter="emphasis" aria-pressed="false">强调</button>
+      <button type="button" data-filter="transition" aria-pressed="false">转场</button>
+      <button type="button" data-filter="capture" aria-pressed="false">录屏</button>
+    </div>
+  </div>
+
+  <div id="grid" class="video-grid">
+    <article class="video-card" data-group="brand" data-id="logochip"><div class="video-surface"><div class="stage" data-preview="logochip"></div><button class="video-open" type="button" aria-label="查看 LogoChip"></button></div><div class="video-card-footer"><strong>LogoChip</strong><span>自适应</span></div></article>
+    <article class="video-card" data-group="brand" data-id="watermark"><div class="video-surface"><div class="stage" data-preview="watermark"></div><button class="video-open" type="button" aria-label="查看 Watermark"></button></div><div class="video-card-footer"><strong>Watermark</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="brand" data-id="trailer"><div class="video-surface"><div class="stage" data-preview="trailer"></div><button class="video-open" type="button" aria-label="查看 Trailer"></button></div><div class="video-card-footer"><strong>Trailer</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="brand" data-id="endtitles"><div class="video-surface"><div class="stage" data-preview="endtitles"></div><button class="video-open" type="button" aria-label="查看 EndTitles"></button></div><div class="video-card-footer"><strong>EndTitles</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="stepcaption"><div class="video-surface"><div class="stage" data-preview="stepcaption"></div><button class="video-open" type="button" aria-label="查看 StepCaption"></button></div><div class="video-card-footer"><strong>StepCaption</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="sticker"><div class="video-surface"><div class="stage" data-preview="sticker"></div><button class="video-open" type="button" aria-label="查看 Sticker"></button></div><div class="video-card-footer"><strong>Sticker</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="memetitle"><div class="video-surface"><div class="stage" data-preview="memetitle"></div><button class="video-open" type="button" aria-label="查看 MemeTitle"></button></div><div class="video-card-footer"><strong>MemeTitle</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="speedpill"><div class="video-surface"><div class="stage" data-preview="speedpill"></div><button class="video-open" type="button" aria-label="查看 SpeedPill"></button></div><div class="video-card-footer"><strong>SpeedPill</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="topheadline"><div class="video-surface"><div class="stage" data-preview="topheadline"></div><button class="video-open" type="button" aria-label="查看 TopHeadline"></button></div><div class="video-card-footer"><strong>TopHeadline</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="text" data-id="brandmark"><div class="video-surface"><div class="stage" data-preview="brandmark"></div><button class="video-open" type="button" aria-label="查看 BrandMark"></button></div><div class="video-card-footer"><strong>BrandMark</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="emphasis" data-id="spotlight"><div class="video-surface"><div class="stage" data-preview="spotlight"></div><button class="video-open" type="button" aria-label="查看 Spotlight"></button></div><div class="video-card-footer"><strong>Spotlight</strong><span>3024 × 1544</span></div></article>
+    <article class="video-card" data-group="emphasis" data-id="ripple"><div class="video-surface"><div class="stage" data-preview="ripple"></div><button class="video-open" type="button" aria-label="查看 Ripple"></button></div><div class="video-card-footer"><strong>Ripple</strong><span>3024 × 1544</span></div></article>
+    <article class="video-card" data-group="emphasis" data-id="callout"><div class="video-surface"><div class="stage" data-preview="callout"></div><button class="video-open" type="button" aria-label="查看 Callout"></button></div><div class="video-card-footer"><strong>Callout</strong><span>3024 × 1544</span></div></article>
+    <article class="video-card" data-group="transition" data-id="fades"><div class="video-surface"><div class="stage" data-preview="fades"></div><button class="video-open" type="button" aria-label="查看 FadeToBlack · FadeIn · FadeOut"></button></div><div class="video-card-footer"><strong>FadeToBlack · FadeIn · FadeOut</strong><span>1920 × 1080</span></div></article>
+    <article class="video-card" data-group="transition" data-id="sweep"><div class="video-surface"><div class="stage" data-preview="sweep"></div><button class="video-open" type="button" aria-label="查看 SweepTransition"></button></div><div class="video-card-footer"><strong>SweepTransition</strong><span>16 秒 · 2 次扫光</span></div></article>
+    <article class="video-card" data-group="capture" data-id="cursor"><div class="video-surface"><div class="stage" data-preview="cursor"></div><button class="video-open" type="button" aria-label="查看 Cursor · Marquee"></button></div><div class="video-card-footer"><strong>Cursor · Marquee</strong><span>3024 × 1544</span></div></article>
+    <article class="video-card" data-group="capture" data-id="dragline"><div class="video-surface"><div class="stage" data-preview="dragline"></div><button class="video-open" type="button" aria-label="查看 DragLine"></button></div><div class="video-card-footer"><strong>DragLine</strong><span>3024 × 1544</span></div></article>
+    <article class="video-card" data-group="capture" data-id="typereveal"><div class="video-surface"><div class="stage" data-preview="typereveal"></div><button class="video-open" type="button" aria-label="查看 TypeReveal"></button></div><div class="video-card-footer"><strong>TypeReveal</strong><span>3024 × 1544</span></div></article>
+  </div>
+
+  <p id="tip" class="canvas-tip">点击预览放大查看</p>
+</main>
+
+<script>
+  // staticFile() in @oii/kit resolves against this, so BRAND.* points at the files published next to the page.
+  window.remotion_staticBase = new URL(".", document.baseURI).pathname.replace(/\/$/, "");
+
+  const $ = (id) => document.getElementById(id);
+  const cards = [...document.querySelectorAll(".video-card")];
+  let filter = "all";
+  let focusId = null;
+
+  function sync() {
+    const focused = focusId !== null;
+    $("grid").classList.toggle("focus-mode", focused);
+    $("back").hidden = !focused;
+    $("toolbar").hidden = focused;
+    $("count").hidden = focused;
+    $("tip").hidden = focused;
+    const card = cards.find((c) => c.dataset.id === focusId);
+    $("heading").textContent = focused ? card.querySelector("strong").textContent : "复用 UI";
+    for (const c of cards) {
+      const visible = focused ? c === card : filter === "all" || c.dataset.group === filter;
+      c.hidden = !visible;
+      c.classList.toggle("selected", focused && c === card);
+    }
+    document.querySelectorAll("#filters button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
+  }
+
+  function open(id) {
+    if (!cards.some((c) => c.dataset.id === id)) return;
+    focusId = id;
+    sync();
+    window.oiiPreview?.setFocus(id);
+    window.scrollTo({ top: 0 });
+    try { history.replaceState(null, "", "#" + id); } catch (_) {}
+  }
+
+  function close() {
+    const last = focusId;
+    focusId = null;
+    sync();
+    window.oiiPreview?.setFocus(null);
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (_) {}
+    cards.find((c) => c.dataset.id === last)?.querySelector(".video-open")?.focus();
+  }
+
+  $("filters").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-filter]");
+    if (!b) return;
+    filter = b.dataset.filter;
+    sync();
+  });
+  cards.forEach((c) => c.querySelector(".video-open").addEventListener("click", () => open(c.dataset.id)));
+  $("back").addEventListener("click", close);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && focusId) close(); });
+
+  // A bare #id in the link opens that component.
+  window.addEventListener("oii-preview-ready", () => {
+    const id = location.hash.slice(1);
+    if (id) open(id);
+  });
+</script>
+<script src="app.js"></script>
+</body>
+</html>

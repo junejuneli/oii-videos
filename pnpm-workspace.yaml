@@ -9,9 +9,11 @@ catalog:
   remotion: 4.0.530
   "@remotion/cli": 4.0.530
   "@remotion/media": 4.0.530
+  "@remotion/player": 4.0.530
   react: 19.2.3
   react-dom: 19.2.3
   "@types/react": 19.2.7
+  "@types/react-dom": 19.2.3
   typescript: 5.9.3
 
 onlyBuiltDependencies:
