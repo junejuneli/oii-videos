@@ -5,12 +5,14 @@ OiiOii 视频的源工程。每个视频一个独立的 Remotion 工程，共用
 ## 目录
 
 ```
-brand/              品牌资产：Logo、水印、片尾 Logo 动画、音效（规格见 brand/README.md）
+brand/              品牌资产：Logo、水印、片尾 Logo 动画、音效、字体（规格见 brand/README.md）
 packages/kit/       @oii/kit：跨视频复用的 Remotion 组件
   capture/            录屏素材：一镜到底时间重映射（buildTake）、演示光标、定格补丁
   motion/             强调与转场：流光框、涟漪、气泡、渐变
   overlays/           画面文字：步骤字幕、顶部标题、进度条
   brand/              水印、片尾、LogoChip
+  hogi/               hogi-marketing-kit 风格：海报文字、粉绿强调、聚光、扫光转场、打字
+packages/gallery/   所有可复用组件的实时预览页（pnpm gallery:serve）
 videos/<YYYY-MM-slug>/  每个视频一个工程
   brief.md            需求、素材、结构、迭代记录
   src/                这个视频专属的代码
@@ -29,7 +31,8 @@ pnpm install
 pnpm new <slug> "标题"                 # 新建 videos/YYYY-MM-<slug>
 pnpm --filter <slug> dev               # 打开 Remotion Studio
 pnpm --filter <slug> release v3        # 渲染母版 + 分享版到 out/
-pnpm typecheck                         # 检查 kit 和所有视频
+pnpm typecheck                         # 检查 kit、预览页和所有视频
+pnpm gallery:serve                     # 构建组件预览页并打开 http://localhost:4173
 pnpm media:lock                        # 记录本地大文件清单
 pnpm media:check                       # 检查大文件是否齐全，以及有没有误提交大文件
 ```

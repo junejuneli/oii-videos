@@ -11,6 +11,15 @@ export const BRAND = {
   click: staticFile("brand/sfx/click.wav"),
   watermarkFrame: (i: number) =>
     staticFile(`brand/watermark/frames/${String(i).padStart(3, "0")}.png`),
+  // hogi-marketing-kit assets, used by the Hogi* components.
+  wordmarkWhite: staticFile("brand/logo/oiioii-wordmark-white.svg"),
+  wordmarkBlack: staticFile("brand/logo/oiioii-wordmark-black.svg"),
+  sweepLogo: staticFile("brand/logo/oii-sweep-logo.svg"),
+  fonts: {
+    sans550: staticFile("brand/fonts/GoogleSansFlex-550-120.woff2"),
+    sans600: staticFile("brand/fonts/GoogleSansFlex-600-120.woff2"),
+    misans: staticFile("brand/fonts/MiSansVF.woff2"),
+  },
 };
 
 /** Frames in the OiiOii logo sting (brand/endcard/trailer.mp4). */

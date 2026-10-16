@@ -15,6 +15,17 @@ description: OiiOii 视频的品牌包装规范与组件：封面、步骤字幕
 - **字体**：`FONT_CN`（SF Pro Rounded + Yuanti SC 圆体），标题用粗体 700。用户反馈过“要加粗、要圆润”。
 - **配色**：`PINK` #F0349B、`GRADIENT`（粉到紫）、`INK` #0A0A0C、亮黄 #FFE14D 用于花字。
 
+## hogi-marketing-kit 风格组件（`@oii/kit` 的 `Hogi*`）
+
+按 hogi-marketing-kit 的海报和扫光规范做的一套，和上面的综艺风格并存，旧视频不受影响。预览见 `pnpm gallery:serve`。
+
+- 文字：Google Sans Flex（宽度 120，550/600）+ MiSans，-0.01em 字距，不描边不投影，靠黑色渐变压暗背景。白字，强调词用粉色 `#FF6CC2`（`highlight`）。
+- 动效：上移 16px + 600ms 出现（`cubic-bezier(0.22,1,0.36,1)`），标题粉 → 白 900ms，退场 180ms（`HOGI_MOTION`）。
+- 组件：`HogiLogoChip`（字标，白/黑，不加底）、`HogiBadge`（字标 | 文案）、`HogiEndTitles`、`HogiStepCaption`、`HogiSticker`（`op` 深色提示 / `result` 绿色）、`HogiMemeTitle`、`HogiSpeedPill`、`HogiTopHeadline`、`HogiBrandMark`。
+- 强调：`HogiSpotlight`（四周压暗 + 细绿框）、`HogiRipple`（粉绿双环）、`HogiCallout`（海报大字）。
+- 转场：`FadeToBlack` / `FadeIn` / `FadeOut`，或 `SweepTransition`（hogi-video-sweep 的扫光，参数默认取 `SWEEP_DEFAULTS`，右上角带 Oii Logo，`logo={false}` 关掉）。
+- 片尾 Logo 动画仍用 `Trailer`。
+
 ## 封面（参考 B 站封面风格）
 
 - 第 0 帧就是一张完整的封面，可以直接截图作为视频封面。

@@ -8,6 +8,8 @@
     "media:lock": "node scripts/media.mjs lock",
     "media:check": "node scripts/media.mjs check",
     "typecheck": "pnpm -r typecheck",
+    "gallery": "pnpm --filter @oii/gallery build",
+    "gallery:serve": "pnpm --filter @oii/gallery serve",
     "format": "prettier --write \"packages/**/*.{ts,tsx}\" \"videos/*/src/**/*.{ts,tsx}\""
   },
   "devDependencies": {

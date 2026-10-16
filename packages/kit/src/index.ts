@@ -18,3 +18,6 @@ export * from "./overlays/Sticker";
 // OiiOii brand: logo, watermark, end sting.
 export * from "./brand";
 export * from "./brand/EndTitles";
+
+// hogi-marketing-kit language: poster type, brand pink/green, the video sweep.
+export * from "./hogi";

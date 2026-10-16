@@ -12,9 +12,15 @@ catalogs:
     '@remotion/media':
       specifier: 4.0.530
       version: 4.0.530
+    '@remotion/player':
+      specifier: 4.0.530
+      version: 4.0.530
     '@types/react':
       specifier: 19.2.7
       version: 19.2.7
+    '@types/react-dom':
+      specifier: 19.2.3
+      version: 19.2.3
     react:
       specifier: 19.2.3
       version: 19.2.3
@@ -35,6 +41,40 @@ importers:
       prettier:
         specifier: 3.8.1
         version: 3.8.1
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  packages/gallery:
+    dependencies:
+      '@oii/kit':
+        specifier: workspace:*
+        version: link:../kit
+      '@remotion/media':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@remotion/player':
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.3
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.3(react@19.2.3)
+      remotion:
+        specifier: 'catalog:'
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.2.7
+      '@types/react-dom':
+        specifier: 'catalog:'
+        version: 19.2.3(@types/react@19.2.7)
+      esbuild:
+        specifier: 0.28.1
+        version: 0.28.1
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -92,7 +132,7 @@ importers:
         version: link:../../packages/kit
       '@remotion/cli':
         specifier: 'catalog:'
-        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+        version: 4.0.530(postcss@8.5.29)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@remotion/media':
         specifier: 'catalog:'
         version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -176,7 +216,7 @@ importers:
         version: link:../../packages/kit
       '@remotion/cli':
         specifier: 'catalog:'
-        version: 4.0.530(postcss@8.5.29)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+        version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@remotion/media':
         specifier: 'catalog:'
         version: 4.0.530(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -804,6 +844,11 @@ packages:
 
   '@types/node@26.6.4':
     resolution: {integrity: sha512-ldVPDCzj7fsaGZrLB0NuHuTvJcsNasysBAqMolr/cgxrLd1xbqxIr3XJiPnHHJUCxj5sNF1vnRj9aWnrVh5Jcg==}
+
+  '@types/react-dom@19.2.3':
+    resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
+    peerDependencies:
+      '@types/react': ^19.2.0
 
   '@types/react@19.2.7':
     resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
@@ -2360,6 +2405,10 @@ snapshots:
     dependencies:
       undici-types: 8.9.0
 
+  '@types/react-dom@19.2.3(@types/react@19.2.7)':
+    dependencies:
+      '@types/react': 19.2.7
+
   '@types/react@19.2.7':
     dependencies:
       csstype: 3.2.3
@@ -2541,7 +2590,7 @@ snapshots:
       semver: 7.8.5
     optionalDependencies:
       '@rspack/core': 1.7.11
-      webpack: 5.105.0(postcss@8.5.29)
+      webpack: 5.105.0(esbuild@0.28.1)(postcss@8.5.29)
 
   cssesc@3.0.0: {}
 
@@ -2907,7 +2956,7 @@ snapshots:
 
   style-loader@4.0.0(webpack@5.105.0(postcss@8.5.29)):
     dependencies:
-      webpack: 5.105.0(postcss@8.5.29)
+      webpack: 5.105.0(esbuild@0.28.1)(postcss@8.5.29)
 
   supports-color@8.1.1:
     dependencies:
@@ -2923,7 +2972,7 @@ snapshots:
       jest-worker: 27.5.1
       schema-utils: 4.5.0
       terser: 5.51.2
-      webpack: 5.105.0(postcss@8.5.29)
+      webpack: 5.105.0(esbuild@0.28.1)(postcss@8.5.29)
     optionalDependencies:
       esbuild: 0.28.1
       postcss: 8.5.29
@@ -2937,16 +2986,6 @@ snapshots:
       webpack: 5.105.0(esbuild@0.28.1)
     optionalDependencies:
       esbuild: 0.28.1
-
-  terser-webpack-plugin@5.6.1(postcss@8.5.29)(webpack@5.105.0(postcss@8.5.29)):
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.31
-      jest-worker: 27.5.1
-      schema-utils: 4.5.0
-      terser: 5.51.2
-      webpack: 5.105.0(postcss@8.5.29)
-    optionalDependencies:
-      postcss: 8.5.29
 
   terser@5.51.2:
     dependencies:
@@ -3045,47 +3084,6 @@ snapshots:
       schema-utils: 4.5.0
       tapable: 2.3.3
       terser-webpack-plugin: 5.6.1(esbuild@0.28.1)(postcss@8.5.29)(webpack@5.105.0(postcss@8.5.29))
-      watchpack: 2.5.2
-      webpack-sources: 3.6.0
-    transitivePeerDependencies:
-      - '@minify-html/node'
-      - '@swc/core'
-      - '@swc/css'
-      - '@swc/html'
-      - clean-css
-      - cssnano
-      - csso
-      - esbuild
-      - html-minifier-terser
-      - lightningcss
-      - postcss
-      - uglify-js
-
-  webpack@5.105.0(postcss@8.5.29):
-    dependencies:
-      '@types/eslint-scope': 3.7.7
-      '@types/estree': 1.0.9
-      '@types/json-schema': 7.0.15
-      '@webassemblyjs/ast': 1.14.1
-      '@webassemblyjs/wasm-edit': 1.14.1
-      '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.19.0
-      acorn-import-phases: 1.0.4(acorn@8.19.0)
-      browserslist: 4.29.3
-      chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.26.0
-      es-module-lexer: 2.3.2
-      eslint-scope: 5.1.1
-      events: 3.3.0
-      glob-to-regexp: 0.4.1
-      graceful-fs: 4.2.11
-      json-parse-even-better-errors: 2.3.1
-      loader-runner: 4.3.2
-      mime-types: 2.1.35
-      neo-async: 2.6.2
-      schema-utils: 4.5.0
-      tapable: 2.3.3
-      terser-webpack-plugin: 5.6.1(postcss@8.5.29)(webpack@5.105.0(postcss@8.5.29))
       watchpack: 2.5.2
       webpack-sources: 3.6.0
     transitivePeerDependencies:

@@ -6,6 +6,10 @@ out/
 # Brand assets are copied into each video's public/brand at dev/render time.
 videos/*/public/brand/
 
+# Component gallery build output and its optional local demo clips.
+packages/gallery/dist/
+packages/gallery/media/
+
 # Heavy media stays on the local disk only (never pushed). Each video's
 # media.lock.json records what should be there; `pnpm media:check` verifies it.
 *.mp4
