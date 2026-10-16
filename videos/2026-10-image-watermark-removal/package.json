@@ -1,0 +1,26 @@
+{
+  "name": "image-watermark-removal",
+  "private": true,
+  "description": "图片去水印",
+  "scripts": {
+    "predev": "node ../../scripts/sync-brand.mjs",
+    "dev": "remotion studio",
+    "prerender": "node ../../scripts/sync-brand.mjs",
+    "render": "remotion render ImageWatermarkRemoval out/preview.mp4 --codec=h264 --crf=18",
+    "prerelease": "node ../../scripts/sync-brand.mjs",
+    "release": "node ../../scripts/release.mjs ImageWatermarkRemoval",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@oii/kit": "workspace:*",
+    "@remotion/cli": "catalog:",
+    "@remotion/media": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remotion": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

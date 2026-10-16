@@ -1,0 +1,44 @@
+{
+  "files": {
+    "public/raw/canvas/local-src.jpg": {
+      "bytes": 608596,
+      "sha256": "010c78ebd30e7c48a37a27b5aea6484b860a45aed20bf680ddb812225852c30d"
+    },
+    "public/raw/canvas/many-src.jpg": {
+      "bytes": 659516,
+      "sha256": "8f923a2fc0f1a95b1d42319f93d923c0dd661ca78d69f600a4a4c2ab55681557"
+    },
+    "public/raw/result/local-result.jpg": {
+      "bytes": 839795,
+      "sha256": "7557607a0f2c3a02f24a450f95a57cda5b3fff440e9318f35227d3e3a76cbee1"
+    },
+    "public/raw/result/many-result.jpg": {
+      "bytes": 1232396,
+      "sha256": "5662406307d642d13110539817e776d0d58827d2741432ca1e449cd8693f940d"
+    },
+    "public/raw/src/img-clean.jpg": {
+      "bytes": 409921,
+      "sha256": "2b6d3f70b60ad74cbcc3a3d26e906b5cff3154dd639942de281720d8edc0ff86"
+    },
+    "public/raw/src/img-watermark-local.jpg": {
+      "bytes": 453896,
+      "sha256": "90947f08c8c5a4aa8ba5bbef7fc5cf9907cc553cc07a21f8050fd8ca45affcf1"
+    },
+    "public/raw/src/img-watermark-many.jpg": {
+      "bytes": 496765,
+      "sha256": "a08d342ae1e3ea413f7637a29cb6a8841689a5fe9570cc7620c1fb508323cf84"
+    },
+    "public/rec/imgA.mp4": {
+      "bytes": 20794005,
+      "sha256": "b500f78f947dc9c3f1045f9d0e08702b3a4de5adff8dd5a934d936f0457c1aa7"
+    },
+    "public/rec/imgB.mp4": {
+      "bytes": 21699606,
+      "sha256": "c29d7e80f5841ab798168bab1537fa5cb816d63d58052be7e8324a942c9d4a19"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 15876044,
+      "sha256": "0f477a3847c2a83c64fa1968a0d9fac446cf77878292b8a608a511c3986749f3"
+    }
+  }
+}

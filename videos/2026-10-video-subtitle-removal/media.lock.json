@@ -1,0 +1,36 @@
+{
+  "files": {
+    "public/raw/canvas/subtitle-src.mp4": {
+      "bytes": 3482385,
+      "sha256": "322491509f4244d3800baa726f0ec266e827fe7f743d97183b01a78304d3891c"
+    },
+    "public/raw/result/auto-result.mp4": {
+      "bytes": 10009530,
+      "sha256": "7aa35311caad1ff9bf3ef5eb48017cd7eaa9185dfdbe1fb07671a08a6ca861b8"
+    },
+    "public/raw/result/box-result.mp4": {
+      "bytes": 10009530,
+      "sha256": "7aa35311caad1ff9bf3ef5eb48017cd7eaa9185dfdbe1fb07671a08a6ca861b8"
+    },
+    "public/raw/src/skate-clean.mp4": {
+      "bytes": 3361639,
+      "sha256": "d92c23aff420a5efb30d5bbecdf1c337195a11a5cefebd0c181d4d00f9a7035c"
+    },
+    "public/raw/src/skate-subtitle.mp4": {
+      "bytes": 3482385,
+      "sha256": "322491509f4244d3800baa726f0ec266e827fe7f743d97183b01a78304d3891c"
+    },
+    "public/rec/vidA.mp4": {
+      "bytes": 41509457,
+      "sha256": "bc397f196801cc29b46fb683ad19522b52742333535fbcf05d58c91fbfef3443"
+    },
+    "public/rec/vidB.mp4": {
+      "bytes": 56245253,
+      "sha256": "ed0db666ecc8e0f32ff8d9f134ecaba189cd5b87a8bc53461081797bc5eee3f0"
+    },
+    "public/sfx/music.wav": {
+      "bytes": 13230044,
+      "sha256": "ba0eea6f2c79b4fa06011f9323922ef5a10c8fb362afe4bafa2b0365c880db6a"
+    }
+  }
+}

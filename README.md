@@ -50,5 +50,7 @@ pnpm media:check                       # 检查大文件是否齐全，以及有
 | [Seedance 2.5 样片模式宣传片](videos/2026-10-seedance25-sample-mode/) | 2026-10 | ✅ 成品 v9 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/seedance25-sample-mode-v9/oiioii-seedance25-sample-mode-v9-1080p.mp4) |
 | [宫格拆分功能介绍](videos/2026-10-grid-split/) | 2026-10 | ✅ 成品 v5 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/grid-split-v5/oiioii-grid-split-v5-1080p.mp4) |
 | [模板功能介绍](videos/2026-10-template-library/) | 2026-10 | ✅ 成品 v4 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/template-library-v4/oiioii-template-library-v4-1080p.mp4) |
+| [图片去水印](videos/2026-10-image-watermark-removal/) | 2026-10 | ✅ 成品 v7 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/image-watermark-removal-v7/oiioii-image-watermark-removal-v7-1080p.mp4) |
+| [视频去字幕](videos/2026-10-video-subtitle-removal/) | 2026-10 | ✅ 成品 v3 | [1080p](https://github.com/junejuneli/oii-videos/releases/download/video-subtitle-removal-v3/oiioii-video-subtitle-removal-v3-1080p.mp4) |
 
 成片发布在 [Releases](https://github.com/junejuneli/oii-videos/releases)：每个成品一个 tag（`<slug>-vN`），附 1080p mp4。仓库本身不存视频文件。
